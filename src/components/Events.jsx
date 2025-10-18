@@ -102,7 +102,10 @@ const Events = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-0 w-64 h-64 sm:w-96 sm:h-96 bg-cyan-500/10 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div
+          className="absolute bottom-1/4 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
       </div>
 
       <div
@@ -146,9 +149,11 @@ const Events = () => {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${event.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 ></div>
-                
+
                 {/* Top Accent Line */}
-                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${event.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
+                <div
+                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${event.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}
+                ></div>
 
                 {/* Card Content */}
                 <div className="relative z-10 p-5 sm:p-6 lg:p-8">
@@ -159,9 +164,11 @@ const Events = () => {
                     >
                       <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                       {/* Icon Glow */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${event.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500`}></div>
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-br ${event.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500`}
+                      ></div>
                     </div>
-                    
+
                     {/* Event Number Badge */}
                     <div className="font-display text-6xl sm:text-7xl font-black text-gray-800/30 group-hover:text-cyan-500/20 transition-colors duration-500">
                       0{event.id}
@@ -172,7 +179,7 @@ const Events = () => {
                   <h3 className="font-heading text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 tracking-wide uppercase">
                     {event.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="font-body text-gray-400 text-sm sm:text-base mb-6 leading-relaxed line-clamp-3">
                     {event.description}
@@ -187,19 +194,26 @@ const Events = () => {
                       Register Now
                     </a>
                     <button className="sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 border-2 border-gray-700 hover:border-cyan-500 rounded-xl text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center justify-center gap-2 hover:bg-cyan-500/10">
-                      <span className="text-sm sm:text-base font-semibold">Details</span>
+                      <span className="text-sm sm:text-base font-semibold">
+                        Details
+                      </span>
                       <ExternalLink className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
 
                 {/* Bottom Corner Accent */}
-                <div className={`absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-tl ${event.color} rounded-tl-full opacity-0 group-hover:opacity-10 transition-all duration-500 transform translate-x-12 translate-y-12 group-hover:translate-x-0 group-hover:translate-y-0`}></div>
-                
+                <div
+                  className={`absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-tl ${event.color} rounded-tl-full opacity-0 group-hover:opacity-10 transition-all duration-500 transform translate-x-12 translate-y-12 group-hover:translate-x-0 group-hover:translate-y-0`}
+                ></div>
+
                 {/* Particle Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-                  <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                  <div
+                    className="absolute top-3/4 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"
+                    style={{ animationDelay: "0.5s" }}
+                  ></div>
                 </div>
               </motion.div>
             );

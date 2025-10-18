@@ -58,10 +58,10 @@ const AboutUs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black mb-6 tracking-wider">
             <span className="gradient-text">About Us</span>
           </h2>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-heading text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed uppercase tracking-widest">
             GCOEJ's Technical Council
           </p>
         </motion.div>
@@ -73,10 +73,10 @@ const AboutUs = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-3xl font-bold text-white mb-6">
+            <h3 className="font-display text-3xl sm:text-4xl font-black text-white mb-6 tracking-wide">
               Empowering Future Engineers
             </h3>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
+            <div className="font-body space-y-4 text-gray-300 leading-relaxed">
               <p>
                 The Technical Council of Government College of Engineering,
                 Jalgaon (GCOEJ) is dedicated to fostering technical excellence

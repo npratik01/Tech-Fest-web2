@@ -3,6 +3,7 @@
 ## How to Test Responsiveness
 
 ### Using Browser DevTools (Chrome/Edge)
+
 1. Press `F12` to open DevTools
 2. Press `Ctrl+Shift+M` (or `Cmd+Shift+M` on Mac) to toggle device toolbar
 3. Test these preset sizes:
@@ -16,6 +17,7 @@
 ### What to Check on Each Screen Size
 
 #### Mobile (375px - 480px)
+
 - ✅ GCOEJ text is readable and not cut off
 - ✅ "Tech Fest 2025" heading is prominent
 - ✅ Both CTA buttons are full width
@@ -27,6 +29,7 @@
 - ✅ Technical Council logo in About Us is centered
 
 #### Tablet (768px - 1024px)
+
 - ✅ Two-column layouts work
 - ✅ Buttons are side-by-side
 - ✅ Text sizes are balanced
@@ -34,6 +37,7 @@
 - ✅ Navigation shows all items
 
 #### Desktop (1280px+)
+
 - ✅ Content is centered with max-width
 - ✅ All effects at full strength
 - ✅ Hover effects work on buttons
@@ -41,6 +45,7 @@
 - ✅ Large text is impactful
 
 ### Common Issues to Check
+
 - ❌ Horizontal scrolling (should never happen)
 - ❌ Text overlapping
 - ❌ Images distorted or stretched
@@ -49,6 +54,7 @@
 - ❌ Background effects too strong/invisible
 
 ### Quick Fix Commands
+
 ```bash
 # If you need to rebuild
 npm run build
@@ -62,6 +68,7 @@ npm run dev
 ```
 
 ## Breakpoint Reference
+
 ```
 sm:  640px   (Small tablets, large phones)
 md:  768px   (Tablets)
@@ -73,36 +80,43 @@ xl:  1280px  (Desktops)
 ## Component-Specific Notes
 
 ### Hero Section
+
 - Background shapes scale with screen size
 - Text wraps naturally on narrow screens
 - Buttons stack vertically on mobile
 
 ### Navbar
+
 - Auto-collapses to hamburger menu below 768px
 - Logo scales: 32px (mobile) → 40px (tablet) → 48px (desktop)
 
 ### Science Exhibition
+
 - Poster maintains 3:4 aspect ratio
 - Stats cards scale proportionally
 - Content order changes: Poster first on desktop, content first on mobile
 
 ### About Us
+
 - Grid changes: 1 column (mobile) → 2 columns (tablet) → 4 columns (desktop)
 - Tech logo padding adjusts with screen size
 
 ## Performance Check
+
 - All pages should load in < 3 seconds
 - Animations should be smooth (60fps)
 - No layout shift when loading
 - Images should be optimized
 
 ## Accessibility Test
+
 - Use keyboard only to navigate (Tab key)
 - Zoom to 200% - text should still be readable
 - Check color contrast (minimum 4.5:1 for normal text)
 
 ---
-**Test Date**: _____________
-**Tested By**: _____________
+
+**Test Date**: ******\_******
+**Tested By**: ******\_******
 **Status**: ⬜ Pass / ⬜ Fail
-**Notes**: _____________________________________________
+**Notes**: **********************\_**********************
