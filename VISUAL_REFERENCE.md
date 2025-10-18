@@ -5,6 +5,7 @@
 ### When to Use Each Font
 
 #### Orbitron (`.font-display`)
+
 ```
 ✓ Main page titles (Tech Fest 2025)
 ✓ Large hero text
@@ -17,6 +18,7 @@ Spacing: tracking-wider
 ```
 
 #### Rajdhani (`.font-heading`)
+
 ```
 ✓ Section headings (Featured Events, About Us)
 ✓ Card titles
@@ -30,6 +32,7 @@ Spacing: tracking-wide to tracking-widest
 ```
 
 #### Space Grotesk (`.font-body`)
+
 ```
 ✓ Paragraphs
 ✓ Descriptions
@@ -84,6 +87,7 @@ Hover Effects:
 ## 📐 Responsive Grid Layout
 
 ### Mobile (< 640px)
+
 ```
 ┌─────────────────┐
 │                 │
@@ -106,6 +110,7 @@ Hover Effects:
 ```
 
 ### Tablet (640px - 1024px)
+
 ```
 ┌──────────────┬──────────────┐
 │              │              │
@@ -127,6 +132,7 @@ Hover Effects:
 ```
 
 ### Desktop (> 1024px)
+
 ```
 ┌─────────┬─────────┬─────────┐
 │         │         │         │
@@ -148,6 +154,7 @@ Hover Effects:
 ## 🎯 Button States
 
 ### Register Button (Primary CTA)
+
 ```
 Normal State:
 ├─────────────────┐
@@ -169,6 +176,7 @@ Active (Pressed):
 ```
 
 ### Details Button (Secondary)
+
 ```
 Normal State:
 ┌─────────────────┐
@@ -188,6 +196,7 @@ Hover State:
 ## 🌈 Color System
 
 ### Gradient Variations
+
 ```
 Cyan Gradient:    ████████ from-cyan-500 to-blue-600
 Blue Gradient:    ████████ from-blue-500 to-cyan-500
@@ -199,6 +208,7 @@ Indigo Gradient:  ████████ from-indigo-500 to-purple-500
 ```
 
 ### Interactive Colors
+
 ```
 Default Border:   ─────── gray-800
 Hover Border:     ─────── cyan-500/50
@@ -213,6 +223,7 @@ Shadow Hover:     ─────── cyan-500/20
 ## 📏 Spacing Scale
 
 ### Mobile First Approach
+
 ```
 Extra Small:  p-3      gap-2      text-sm
 Small:        p-4      gap-3      text-base
@@ -230,6 +241,7 @@ Gaps:     gap-4  sm:gap-6  lg:gap-8
 ## ⚡ Animation Timing
 
 ### Standard Durations
+
 ```
 Fast:         200ms   (micro-interactions)
 Normal:       300ms   (hover states)
@@ -239,6 +251,7 @@ Very Slow:    1200ms  (scroll reveals)
 ```
 
 ### Easing Functions
+
 ```
 ease-out:         Quick start, slow end (entering)
 ease-in:          Slow start, quick end (exiting)
@@ -251,6 +264,7 @@ cubic-bezier:     Custom curves (advanced)
 ## 🎬 Animation Sequence
 
 ### Card Hover Timeline
+
 ```
 0ms      : Hover starts
 0-500ms  : Card lifts (y: 0 → -8px)
@@ -263,6 +277,7 @@ cubic-bezier:     Custom curves (advanced)
 ```
 
 ### Page Load Sequence
+
 ```
 0ms      : Page starts loading
 0-600ms  : GCOEJ text fades in
@@ -279,6 +294,7 @@ cubic-bezier:     Custom curves (advanced)
 ## 🔍 Accessibility Features
 
 ### Keyboard Navigation
+
 ```
 Tab         → Next focusable element
 Shift+Tab   → Previous focusable element
@@ -288,6 +304,7 @@ Esc         → Close modal/menu
 ```
 
 ### Focus Indicators
+
 ```
 Visible outline on all interactive elements
 Contrast ratio meets WCAG AA standards
@@ -296,6 +313,7 @@ ARIA labels where needed
 ```
 
 ### Touch Targets
+
 ```
 Minimum size: 44x44px (iOS standard)
 Adequate spacing between elements
@@ -308,6 +326,7 @@ Visual feedback on tap
 ## 💡 Pro Tips
 
 ### For Best Performance
+
 1. ✓ Use transform/opacity for animations
 2. ✓ Avoid animating width/height
 3. ✓ Enable hardware acceleration
@@ -315,6 +334,7 @@ Visual feedback on tap
 5. ✓ Optimize images (WebP format)
 
 ### For Best Mobile UX
+
 1. ✓ Test on real devices
 2. ✓ Use thumb-friendly zones
 3. ✓ Avoid tiny text (min 14px)
@@ -322,6 +342,7 @@ Visual feedback on tap
 5. ✓ Design for one-handed use
 
 ### For Best Readability
+
 1. ✓ Line length 50-75 characters
 2. ✓ Line height 1.5-1.8
 3. ✓ Sufficient contrast (4.5:1)
@@ -331,6 +352,7 @@ Visual feedback on tap
 ---
 
 **Need Help?**
+
 - Check `FONT_CARD_IMPROVEMENTS.md` for detailed documentation
 - Check `RESPONSIVE_IMPROVEMENTS.md` for responsive details
 - Check `TESTING_GUIDE.md` for testing procedures
