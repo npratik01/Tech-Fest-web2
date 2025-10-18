@@ -111,7 +111,7 @@ const AboutUs = () => {
               <img
                 src="/techLogo.png"
                 alt="GCOEJ Technical Council Logo"
-                className="w-full h-full object-contain bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm p-8"
+                className="w-full h-full object-contain bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm p-4 sm:p-6 md:p-8"
               />
             </div>
           </motion.div>

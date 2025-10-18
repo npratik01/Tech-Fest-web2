@@ -101,8 +101,8 @@ const Events = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-neon-blue/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-neon-purple/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/4 left-0 w-64 h-64 sm:w-96 sm:h-96 bg-cyan-500/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div
@@ -114,12 +114,12 @@ const Events = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black mb-4 tracking-wider">
             <span className="gradient-text">Featured Events</span>
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="font-body text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
             Explore our exciting lineup of competitions, workshops, and
             exhibitions
           </p>
@@ -130,7 +130,7 @@ const Events = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
         >
           {events.map((event, index) => {
             const Icon = event.icon;
@@ -138,46 +138,69 @@ const Events = () => {
               <motion.div
                 key={event.id}
                 variants={cardVariants}
-                whileHover={{ scale: 1.05, rotateY: 5 }}
-                className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-neon-blue/50 transition-all duration-300 overflow-hidden"
+                whileHover={{ y: -8, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative bg-gray-900/40 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-gray-800 hover:border-cyan-500/50 transition-all duration-500 overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20"
               >
-                {/* Glow Effect */}
+                {/* Animated Background Gradient */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${event.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                  className={`absolute inset-0 bg-gradient-to-br ${event.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 ></div>
+                
+                {/* Top Accent Line */}
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${event.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
 
-                {/* Icon */}
-                <div
-                  className={`relative z-10 w-14 h-14 bg-gradient-to-br ${event.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <Icon className="w-7 h-7 text-white" />
-                </div>
+                {/* Card Content */}
+                <div className="relative z-10 p-5 sm:p-6 lg:p-8">
+                  {/* Icon Container */}
+                  <div className="flex items-start justify-between mb-4 sm:mb-6">
+                    <div
+                      className={`relative w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${event.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-cyan-500/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
+                    >
+                      <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+                      {/* Icon Glow */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${event.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500`}></div>
+                    </div>
+                    
+                    {/* Event Number Badge */}
+                    <div className="font-display text-6xl sm:text-7xl font-black text-gray-800/30 group-hover:text-cyan-500/20 transition-colors duration-500">
+                      0{event.id}
+                    </div>
+                  </div>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-neon-blue transition-colors duration-300">
+                  {/* Title */}
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 tracking-wide uppercase">
                     {event.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                  
+                  {/* Description */}
+                  <p className="font-body text-gray-400 text-sm sm:text-base mb-6 leading-relaxed line-clamp-3">
                     {event.description}
                   </p>
 
-                  {/* Buttons */}
-                  <div className="flex gap-3">
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <a
                       href={event.registerLink}
-                      className={`flex-1 px-4 py-2 bg-gradient-to-r ${event.color} text-white rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-neon-blue/50 transition-all duration-300 text-center`}
+                      className={`flex-1 px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-r ${event.color} text-white rounded-xl font-semibold text-sm sm:text-base hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 text-center transform hover:-translate-y-0.5 active:translate-y-0`}
                     >
-                      Register
+                      Register Now
                     </a>
-                    <button className="px-4 py-2 border border-gray-600 hover:border-neon-purple rounded-lg text-gray-300 hover:text-white transition-colors duration-300">
+                    <button className="sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 border-2 border-gray-700 hover:border-cyan-500 rounded-xl text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center justify-center gap-2 hover:bg-cyan-500/10">
+                      <span className="text-sm sm:text-base font-semibold">Details</span>
                       <ExternalLink className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
 
-                {/* Corner Accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-neon-blue/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Bottom Corner Accent */}
+                <div className={`absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-tl ${event.color} rounded-tl-full opacity-0 group-hover:opacity-10 transition-all duration-500 transform translate-x-12 translate-y-12 group-hover:translate-x-0 group-hover:translate-y-0`}></div>
+                
+                {/* Particle Effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+                  <div className="absolute top-3/4 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                </div>
               </motion.div>
             );
           })}

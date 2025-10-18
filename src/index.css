@@ -43,7 +43,7 @@
 body {
   background-color: rgb(3 7 18);
   color: white;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Space Grotesk', 'Rajdhani', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -54,11 +54,35 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Font Family Classes */
+.font-display {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.font-heading {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.font-body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 .gradient-text {
-  background: linear-gradient(to right, #06b6d4, #3b82f6, #0ea5e9);
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #0ea5e9 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .glow-effect {
@@ -71,3 +95,73 @@ html {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
+
+/* Floating Shapes */
+.floating-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+}
+
+/* Responsive adjustments for all screen sizes */
+@media (max-width: 1024px) {
+  .shape {
+    filter: blur(70px);
+    opacity: 0.28;
+  }
+}
+
+@media (max-width: 768px) {
+  .shape {
+    filter: blur(60px);
+    opacity: 0.25;
+  }
+}
+
+@media (max-width: 640px) {
+  .shape {
+    filter: blur(50px);
+    opacity: 0.22;
+  }
+}
+
+@media (max-width: 480px) {
+  .shape {
+    filter: blur(40px);
+    opacity: 0.2;
+  }
+}
+
+/* Ensure consistent glow effect on all screens */
+@media (max-width: 768px) {
+  .glow-effect {
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4),
+                0 0 30px rgba(59, 130, 246, 0.25);
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure text remains readable on all screen sizes */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Prevent horizontal scroll on small screens */
+.overflow-hidden {
+  overflow-x: hidden !important;
+}
+

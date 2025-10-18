@@ -41,9 +41,9 @@ const Navbar = () => {
             <img
               src="/gcoejLogo.png"
               alt="GCOEJ Logo"
-              className="w-10 h-10 md:w-12 md:h-12 object-contain"
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
             />
-            <span className="text-xl md:text-2xl font-bold gradient-text">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold gradient-text whitespace-nowrap">
               Tech Fest 2025
             </span>
           </motion.div>
