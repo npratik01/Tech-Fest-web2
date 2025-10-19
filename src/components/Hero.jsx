@@ -2,6 +2,25 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 const Hero = () => {
+  // Generate random tech symbols
+  const techSymbols = [
+    "{ }",
+    "< >",
+    "/>",
+    "[ ]",
+    "( )",
+    "01",
+    "10",
+    "λ",
+    "Σ",
+    "Δ",
+    "∫",
+    "∂",
+  ];
+  const binaryNumbers = Array.from({ length: 15 }, () =>
+    Math.random() > 0.5 ? "1" : "0"
+  );
+
   return (
     <section
       id="home"
@@ -9,6 +28,311 @@ const Hero = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 animated-background"></div>
+
+      {/* Circuit Board Lines - Animated */}
+      <div className="absolute inset-0 opacity-20 overflow-hidden">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient
+              id="circuitGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stopColor="#00f0ff" />
+              <stop offset="50%" stopColor="#a855f7" />
+              <stop offset="100%" stopColor="#ec4899" />
+            </linearGradient>
+          </defs>
+          {/* Horizontal lines */}
+          <motion.line
+            x1="0"
+            y1="20%"
+            x2="100%"
+            y2="20%"
+            stroke="url(#circuitGradient)"
+            strokeWidth="1"
+            animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          />
+          <motion.line
+            x1="0"
+            y1="40%"
+            x2="100%"
+            y2="40%"
+            stroke="url(#circuitGradient)"
+            strokeWidth="1"
+            animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 1,
+            }}
+          />
+          <motion.line
+            x1="0"
+            y1="60%"
+            x2="100%"
+            y2="60%"
+            stroke="url(#circuitGradient)"
+            strokeWidth="1"
+            animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 0.5,
+            }}
+          />
+          <motion.line
+            x1="0"
+            y1="80%"
+            x2="100%"
+            y2="80%"
+            stroke="url(#circuitGradient)"
+            strokeWidth="1"
+            animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{
+              duration: 4.5,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 1.5,
+            }}
+          />
+          {/* Vertical lines */}
+          <motion.line
+            x1="20%"
+            y1="0"
+            x2="20%"
+            y2="100%"
+            stroke="url(#circuitGradient)"
+            strokeWidth="1"
+            animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 0.7,
+            }}
+          />
+          <motion.line
+            x1="50%"
+            y1="0"
+            x2="50%"
+            y2="100%"
+            stroke="url(#circuitGradient)"
+            strokeWidth="1"
+            animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 1.2,
+            }}
+          />
+          <motion.line
+            x1="80%"
+            y1="0"
+            x2="80%"
+            y2="100%"
+            stroke="url(#circuitGradient)"
+            strokeWidth="1"
+            animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{
+              duration: 3.8,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 0.3,
+            }}
+          />
+        </svg>
+      </div>
+
+      {/* Floating Tech Symbols */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {techSymbols.map((symbol, index) => (
+          <motion.div
+            key={`symbol-${index}`}
+            className="absolute text-2xl font-mono font-bold text-cyan-400/20"
+            style={{
+              left: `${(index * 15) % 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [-20, -100],
+              opacity: [0, 0.5, 0],
+              rotate: [0, 360],
+            }}
+            transition={{
+              duration: 8 + Math.random() * 4,
+              repeat: Infinity,
+              delay: index * 0.5,
+              ease: "linear",
+            }}
+          >
+            {symbol}
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Binary Rain Effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {binaryNumbers.map((num, index) => (
+          <motion.div
+            key={`binary-${index}`}
+            className="absolute text-sm font-mono text-green-400/30"
+            style={{
+              left: `${(index * 7) % 100}%`,
+              top: `-10%`,
+            }}
+            animate={{
+              y: ["0vh", "110vh"],
+              opacity: [0, 0.6, 0],
+            }}
+            transition={{
+              duration: 5 + Math.random() * 3,
+              repeat: Infinity,
+              delay: index * 0.3,
+              ease: "linear",
+            }}
+          >
+            {Array.from({ length: 10 }, (_, i) => (
+              <div key={i} className="mb-2">
+                {Math.random() > 0.5 ? "1" : "0"}
+              </div>
+            ))}
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Geometric Shapes - Hexagons */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(6)].map((_, index) => (
+          <motion.div
+            key={`hex-${index}`}
+            className="absolute"
+            style={{
+              left: `${(index * 20) % 100}%`,
+              top: `${(index * 15) % 80}%`,
+              width: "60px",
+              height: "60px",
+            }}
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.2, 1],
+              opacity: [0.1, 0.3, 0.1],
+            }}
+            transition={{
+              duration: 10 + index,
+              repeat: Infinity,
+              delay: index * 0.8,
+              ease: "linear",
+            }}
+          >
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <polygon
+                points="50 1 95 25 95 75 50 99 5 75 5 25"
+                fill="none"
+                stroke="rgba(168, 85, 247, 0.4)"
+                strokeWidth="2"
+              />
+            </svg>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Floating Data Nodes with Connection Lines */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
+        <svg className="w-full h-full">
+          {/* Create nodes */}
+          {[...Array(8)].map((_, index) => {
+            const x = 10 + ((index * 12) % 80);
+            const y = 15 + ((index * 17) % 70);
+            return (
+              <motion.g key={`node-${index}`}>
+                {/* Connection lines */}
+                {index < 7 && (
+                  <motion.line
+                    x1={`${x}%`}
+                    y1={`${y}%`}
+                    x2={`${10 + (((index + 1) * 12) % 80)}%`}
+                    y2={`${15 + (((index + 1) * 17) % 70)}%`}
+                    stroke={
+                      index % 3 === 0
+                        ? "#00f0ff"
+                        : index % 3 === 1
+                        ? "#a855f7"
+                        : "#ec4899"
+                    }
+                    strokeWidth="1"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={{
+                      pathLength: [0, 1, 0],
+                      opacity: [0, 0.6, 0],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: index * 0.4,
+                      ease: "easeInOut",
+                    }}
+                  />
+                )}
+                {/* Node circles */}
+                <motion.circle
+                  cx={`${x}%`}
+                  cy={`${y}%`}
+                  r="4"
+                  fill={
+                    index % 3 === 0
+                      ? "#00f0ff"
+                      : index % 3 === 1
+                      ? "#a855f7"
+                      : "#ec4899"
+                  }
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0.4, 0.8, 0.4],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: index * 0.3,
+                    ease: "easeInOut",
+                  }}
+                />
+                {/* Outer glow ring */}
+                <motion.circle
+                  cx={`${x}%`}
+                  cy={`${y}%`}
+                  r="8"
+                  fill="none"
+                  stroke={
+                    index % 3 === 0
+                      ? "#00f0ff"
+                      : index % 3 === 1
+                      ? "#a855f7"
+                      : "#ec4899"
+                  }
+                  strokeWidth="1"
+                  animate={{
+                    scale: [1, 2, 1],
+                    opacity: [0.6, 0, 0.6],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: index * 0.3,
+                    ease: "easeOut",
+                  }}
+                />
+              </motion.g>
+            );
+          })}
+        </svg>
+      </div>
 
       {/* Floating Shapes - Responsive */}
       <div className="floating-shapes">
