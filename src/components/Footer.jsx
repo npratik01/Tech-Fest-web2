@@ -51,7 +51,7 @@ const Footer = () => {
                     href="tel:+917432993283"
                     className="hover:text-neon-blue transition-colors"
                   >
-                    74329932832
+                    +91 9011437886
                   </a>
                 </div>
               </li>
@@ -67,7 +67,7 @@ const Footer = () => {
                     href="tel:+917372382387"
                     className="hover:text-neon-blue transition-colors"
                   >
-                    73723823874
+                    +91 7499441450
                   </a>
                 </div>
               </li>
@@ -83,7 +83,7 @@ const Footer = () => {
                     href="tel:+918372884929"
                     className="hover:text-neon-blue transition-colors"
                   >
-                    83728849298
+                    +91 8788066583
                   </a>
                 </div>
               </li>
@@ -99,7 +99,7 @@ const Footer = () => {
                     href="tel:+913837282498"
                     className="hover:text-neon-blue transition-colors"
                   >
-                    383728249829
+                    +91 9766285034
                   </a>
                 </div>
               </li>

@@ -47,9 +47,9 @@ const Navbar = () => {
               |
             </span>
             <img
-              src="/techLogo.png"
-              alt="Tech Council Logo"
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
+              src="/techFestLogo.png"
+              alt="Tech Fest Logo"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
             />
             <span className="font-display text-lg sm:text-xl md:text-2xl font-bold gradient-text whitespace-nowrap tracking-wider">
               Tech Fest 2025

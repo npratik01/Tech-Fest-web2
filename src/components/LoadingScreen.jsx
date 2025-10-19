@@ -42,7 +42,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           transition={{ type: "spring", stiffness: 200, damping: 15 }}
         >
           <h1 className="text-5xl sm:text-7xl font-bold gradient-text mb-8">
-            Tech Fest 2025
+            Tech Fest 2025 - GCOEJ
           </h1>
         </motion.div>
 
