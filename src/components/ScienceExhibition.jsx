@@ -66,7 +66,7 @@ const ScienceExhibition = () => {
               className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 bg-gray-800/90 backdrop-blur-sm border border-cyan-700 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xl"
             >
               <div className="text-2xl sm:text-3xl font-bold gradient-text">
-                20+
+                15+
               </div>
               <div className="text-xs sm:text-sm text-gray-400">
                 Schools Invited
@@ -80,7 +80,7 @@ const ScienceExhibition = () => {
               className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-gray-800/90 backdrop-blur-sm border border-cyan-700 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xl"
             >
               <div className="text-2xl sm:text-3xl font-bold gradient-text">
-                500+
+                50+
               </div>
               <div className="text-xs sm:text-sm text-gray-400">
                 Expected Participants
