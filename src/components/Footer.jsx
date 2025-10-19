@@ -31,7 +31,7 @@ const Footer = () => {
             <p className="text-gray-300 text-base font-semibold italic mb-6 leading-relaxed">
               Scale. Speed. Spectacle. The New Pulse of GCOEJ.
             </p>
-            
+
             <h4 className="text-lg font-semibold text-white mb-3">
               Contact Us
             </h4>
@@ -39,10 +39,15 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-neon-blue flex-shrink-0" />
                 <div>
-                  <span className="text-gray-300 font-medium">Saksham Meshram</span>
+                  <span className="text-gray-300 font-medium">
+                    Saksham Meshram
+                  </span>
                   <span className="text-gray-500"> (Convenor)</span>
                   <br />
-                  <a href="tel:+917432993283" className="hover:text-neon-blue transition-colors">
+                  <a
+                    href="tel:+917432993283"
+                    className="hover:text-neon-blue transition-colors"
+                  >
                     74329932832
                   </a>
                 </div>
@@ -50,10 +55,15 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-neon-purple flex-shrink-0" />
                 <div>
-                  <span className="text-gray-300 font-medium">Pratik Nikam</span>
+                  <span className="text-gray-300 font-medium">
+                    Pratik Nikam
+                  </span>
                   <span className="text-gray-500"> (Co-Convenor)</span>
                   <br />
-                  <a href="tel:+917372382387" className="hover:text-neon-purple transition-colors">
+                  <a
+                    href="tel:+917372382387"
+                    className="hover:text-neon-purple transition-colors"
+                  >
                     73723823874
                   </a>
                 </div>
@@ -61,10 +71,15 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-neon-pink flex-shrink-0" />
                 <div>
-                  <span className="text-gray-300 font-medium">Kunal Ghorpade</span>
+                  <span className="text-gray-300 font-medium">
+                    Kunal Ghorpade
+                  </span>
                   <span className="text-gray-500"> (Co-Convenor)</span>
                   <br />
-                  <a href="tel:+918372884929" className="hover:text-neon-pink transition-colors">
+                  <a
+                    href="tel:+918372884929"
+                    className="hover:text-neon-pink transition-colors"
+                  >
                     83728849298
                   </a>
                 </div>
@@ -72,10 +87,15 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-neon-blue flex-shrink-0" />
                 <div>
-                  <span className="text-gray-300 font-medium">Vedant Meshram</span>
+                  <span className="text-gray-300 font-medium">
+                    Vedant Meshram
+                  </span>
                   <span className="text-gray-500"> (Co-Convenor)</span>
                   <br />
-                  <a href="tel:+913837282498" className="hover:text-neon-blue transition-colors">
+                  <a
+                    href="tel:+913837282498"
+                    className="hover:text-neon-blue transition-colors"
+                  >
                     383728249829
                   </a>
                 </div>
@@ -173,7 +193,8 @@ const Footer = () => {
             All rights are reserved by Technical Council
           </p>
           <p className="text-gray-400 text-sm text-center">
-            Developed by <span className="text-neon-blue font-semibold">Pratik Nikam</span>
+            Developed by{" "}
+            <span className="text-neon-blue font-semibold">Pratik Nikam</span>
           </p>
         </div>
       </div>
