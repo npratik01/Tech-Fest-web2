@@ -74,14 +74,14 @@ const ScienceExhibition = () => {
               </div>
             </motion.div>
 
-            {/* Mobile Button - Below Poster */}
+            {/* Mobile Button - Below Poster and Stats */}
             <motion.a
               href="https://forms.gle/frfmg64dCkwNg1pG7"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="lg:hidden mt-8 inline-flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full font-semibold text-white glow-effect group"
+              className="lg:hidden mt-16 inline-flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full font-semibold text-white glow-effect group"
             >
               Participate Now
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -73,6 +73,17 @@ const AboutUs = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
+            {/* Logo for Mobile - Above text */}
+            <div className="lg:hidden mb-8 flex justify-center">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl max-w-xs">
+                <img
+                  src="/techLogo.png"
+                  alt="GCOEJ Technical Council Logo"
+                  className="w-full h-full object-contain bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm p-6"
+                />
+              </div>
+            </div>
+
             <h3 className="font-display text-3xl sm:text-4xl font-black text-white mb-6 tracking-wide">
               Empowering Future Engineers
             </h3>
@@ -99,12 +110,12 @@ const AboutUs = () => {
             </div>
           </motion.div>
 
-          {/* Right Visual - Technical Council Logo */}
+          {/* Right Visual - Technical Council Logo (Desktop Only) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative hidden lg:block"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               {/* Technical Council Logo Image */}
