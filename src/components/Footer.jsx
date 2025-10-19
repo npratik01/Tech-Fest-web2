@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, ArrowUp } from "lucide-react";
+import { Heart, ArrowUp, Linkedin, Instagram, Mail, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Footer = () => {
@@ -23,15 +23,64 @@ const Footer = () => {
     <footer className="relative bg-gray-950 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* About */}
+          {/* About & Contacts */}
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-4">
               Tech Fest 2025
             </h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Organized by GCOEJ's Technical Council. A platform for innovation,
-              creativity, and technical excellence.
+            <p className="text-gray-300 text-base font-semibold italic mb-6 leading-relaxed">
+              Scale. Speed. Spectacle. The New Pulse of GCOEJ.
             </p>
+            
+            <h4 className="text-lg font-semibold text-white mb-3">
+              Contact Us
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li className="flex items-start gap-2">
+                <Phone className="w-4 h-4 mt-0.5 text-neon-blue flex-shrink-0" />
+                <div>
+                  <span className="text-gray-300 font-medium">Saksham Meshram</span>
+                  <span className="text-gray-500"> (Convenor)</span>
+                  <br />
+                  <a href="tel:+917432993283" className="hover:text-neon-blue transition-colors">
+                    74329932832
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <Phone className="w-4 h-4 mt-0.5 text-neon-purple flex-shrink-0" />
+                <div>
+                  <span className="text-gray-300 font-medium">Pratik Nikam</span>
+                  <span className="text-gray-500"> (Co-Convenor)</span>
+                  <br />
+                  <a href="tel:+917372382387" className="hover:text-neon-purple transition-colors">
+                    73723823874
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <Phone className="w-4 h-4 mt-0.5 text-neon-pink flex-shrink-0" />
+                <div>
+                  <span className="text-gray-300 font-medium">Kunal Ghorpade</span>
+                  <span className="text-gray-500"> (Co-Convenor)</span>
+                  <br />
+                  <a href="tel:+918372884929" className="hover:text-neon-pink transition-colors">
+                    83728849298
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <Phone className="w-4 h-4 mt-0.5 text-neon-blue flex-shrink-0" />
+                <div>
+                  <span className="text-gray-300 font-medium">Vedant Meshram</span>
+                  <span className="text-gray-500"> (Co-Convenor)</span>
+                  <br />
+                  <a href="tel:+913837282498" className="hover:text-neon-blue transition-colors">
+                    383728249829
+                  </a>
+                </div>
+              </li>
+            </ul>
           </div>
 
           {/* Quick Links */}
@@ -65,6 +114,43 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+
+            <h4 className="text-lg font-semibold text-white mb-4 mt-6">
+              Connect With Us
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/technical-council-gcoej"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-neon-blue transition-colors text-sm flex items-center gap-2"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/technicalcouncil_gcoej"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-neon-pink transition-colors text-sm flex items-center gap-2"
+                >
+                  <Instagram className="w-4 h-4" />
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:technicalcouncil@gcoej.ac.in"
+                  className="text-gray-400 hover:text-neon-purple transition-colors text-sm flex items-center gap-2"
+                >
+                  <Mail className="w-4 h-4" />
+                  Email
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* Event Info */}
@@ -82,14 +168,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm text-center md:text-left">
-            © {currentYear} GCOEJ Technical Council. All rights reserved.
+        <div className="border-t border-gray-800 pt-8 flex flex-col items-center gap-3">
+          <p className="text-gray-400 text-sm text-center">
+            All rights are reserved by Technical Council
           </p>
-
-          <p className="text-gray-400 text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-red-500 fill-current" /> by
-            Technical Council
+          <p className="text-gray-400 text-sm text-center">
+            Developed by <span className="text-neon-blue font-semibold">Pratik Nikam</span>
           </p>
         </div>
       </div>
