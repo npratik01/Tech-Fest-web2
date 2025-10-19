@@ -366,10 +366,13 @@ const Hero = () => {
         >
           (An Autonomous Institute of Government of Maharashtra)
         </div>
-        <div className="font-heading text-xl sm:text-2xl md:text-3xl font-bold tracking-widest text-gray-200 mt-4 uppercase">
+        <div
+          className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wide text-gray-200 mt-4"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
           Technical Council
         </div>
-        <div className="font-body text-base sm:text-lg md:text-xl font-light italic text-gray-300 mt-2">
+        <div className="font-body text-base sm:text-lg md:text-xl font-light italic text-gray-300 mt-1">
           presents
         </div>
       </motion.div>
@@ -381,7 +384,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             {/* Main Heading */}
             <motion.h1
@@ -398,7 +401,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="font-heading text-xl sm:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-400 font-bold uppercase tracking-wide"
+              className="font-heading text-xl sm:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-400 font-bold tracking-wide capitalize"
             >
               Institute Level Technical Events
             </motion.p>

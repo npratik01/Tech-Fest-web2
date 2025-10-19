@@ -22,20 +22,23 @@ const Footer = () => {
   return (
     <footer className="relative bg-gray-950 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* About & Contacts */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Tech Fest 2025 & Tagline */}
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-4">
               Tech Fest 2025
             </h3>
-            <p className="text-gray-300 text-base font-semibold italic mb-6 leading-relaxed">
+            <p className="text-gray-300 text-base font-semibold italic leading-relaxed">
               Scale. Speed. Spectacle. The New Pulse of GCOEJ.
             </p>
+          </div>
 
-            <h4 className="text-lg font-semibold text-white mb-3">
+          {/* Contact Us */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">
               Contact Us
             </h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-neon-blue flex-shrink-0" />
                 <div>
@@ -53,7 +56,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 mt-0.5 text-neon-purple flex-shrink-0" />
+                <Phone className="w-4 h-4 mt-0.5 text-neon-blue flex-shrink-0" />
                 <div>
                   <span className="text-gray-300 font-medium">
                     Pratik Nikam
@@ -62,14 +65,14 @@ const Footer = () => {
                   <br />
                   <a
                     href="tel:+917372382387"
-                    className="hover:text-neon-purple transition-colors"
+                    className="hover:text-neon-blue transition-colors"
                   >
                     73723823874
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 mt-0.5 hover:text-neon-pink transition-colors" />
+                <Phone className="w-4 h-4 mt-0.5 text-neon-blue flex-shrink-0" />
                 <div>
                   <span className="text-gray-300 font-medium">
                     Kunal Ghorpade
@@ -78,7 +81,7 @@ const Footer = () => {
                   <br />
                   <a
                     href="tel:+918372884929"
-                    className="hover:text-neon-pink transition-colors"
+                    className="hover:text-neon-blue transition-colors"
                   >
                     83728849298
                   </a>
@@ -134,8 +137,11 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+          </div>
 
-            <h4 className="text-lg font-semibold text-white mb-4 mt-6">
+          {/* Connect With Us */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">
               Connect With Us
             </h4>
             <ul className="space-y-2">
@@ -170,19 +176,6 @@ const Footer = () => {
                   Email
                 </a>
               </li>
-            </ul>
-          </div>
-
-          {/* Event Info */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">
-              Event Details
-            </h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>📅 14th November 2025</li>
-              <li>🕓 9:00 AM onwards</li>
-              <li>📍 GCOEJ, Jalgaon</li>
-              <li>🎓 Institute Level Event</li>
             </ul>
           </div>
         </div>
