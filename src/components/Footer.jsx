@@ -69,7 +69,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 mt-0.5 text-neon-pink flex-shrink-0" />
+                <Phone className="w-4 h-4 mt-0.5 hover:text-neon-pink transition-colors" />
                 <div>
                   <span className="text-gray-300 font-medium">
                     Kunal Ghorpade

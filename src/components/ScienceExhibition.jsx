@@ -73,6 +73,19 @@ const ScienceExhibition = () => {
                 Expected Participants
               </div>
             </motion.div>
+
+            {/* Mobile Button - Below Poster */}
+            <motion.a
+              href="https://forms.gle/frfmg64dCkwNg1pG7"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="lg:hidden mt-8 inline-flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full font-semibold text-white glow-effect group"
+            >
+              Participate Now
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.a>
           </motion.div>
 
           {/* Right Content */}
@@ -150,13 +163,14 @@ const ScienceExhibition = () => {
               </div>
             </div>
 
+            {/* Desktop Button - Right Content */}
             <motion.a
               href="https://forms.gle/frfmg64dCkwNg1pG7"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full font-semibold text-white glow-effect group"
+              className="hidden lg:inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full font-semibold text-white glow-effect group"
             >
               Participate Now
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

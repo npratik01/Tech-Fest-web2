@@ -354,15 +354,16 @@ const Hero = () => {
         transition={{ duration: 0.6 }}
         className="relative z-10 pt-20 sm:pt-24 pb-2 sm:pb-4 px-4 text-center"
       >
-        <div className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider text-gray-50 mt-2">
-          Government College of Engineering Jalgaon's
+        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider text-gray-50 mt-2" style={{ fontFamily: "'Lora', serif" }}>
+          Government College of Engineering Jalgaon
         </div>
-        <br />
-        <div className="font-heading text-xl sm:text-2xl md:text-3xl font-bold tracking-widest text-gray-200 mt-1 uppercase">
+        <div className="text-sm sm:text-base md:text-lg font-bold italic text-gray-300 mt-2" style={{ fontFamily: "'Times New Roman', serif" }}>
+          (An Autonomous Institute of Government of Maharashtra)
+        </div>
+        <div className="font-heading text-xl sm:text-2xl md:text-3xl font-bold tracking-widest text-gray-200 mt-4 uppercase">
           Technical Council
         </div>
-        <br />
-        <div className="font-body text-base sm:text-lg md:text-xl font-light italic text-gray-300 mt-1">
+        <div className="font-body text-base sm:text-lg md:text-xl font-light italic text-gray-300 mt-2">
           presents
         </div>
       </motion.div>
