@@ -43,7 +43,9 @@ const Navbar = () => {
               alt="GCOEJ Logo"
               className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
             />
-            <span className="text-gray-400 text-xl sm:text-2xl md:text-3xl font-light">|</span>
+            <span className="text-gray-400 text-xl sm:text-2xl md:text-3xl font-light">
+              |
+            </span>
             <img
               src="/techLogo.png"
               alt="Tech Council Logo"
