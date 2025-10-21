@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import LoadingScreen from "./components/LoadingScreen";
 import ParticlesBackground from "./components/ParticlesBackground";
+// import AnimeBackground from "./components/AnimeBackground";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Events from "./components/Events";
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-950 relative">
       <ParticlesBackground />
+      {/* <AnimeBackground /> */}
       <div className="relative z-10">
         <Navbar />
         <Hero />

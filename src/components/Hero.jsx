@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+// import { useEffect, useRef } from "react";
+// import anime from 'animejs';
 
 const Hero = () => {
+  // const gcoejTextRef = useRef(null);
+  // const mainHeadingRef = useRef(null);
+  // const ctaButtonsRef = useRef(null);
+
   // Generate random tech symbols
   const techSymbols = [
     "{ }",
@@ -20,6 +26,49 @@ const Hero = () => {
   const binaryNumbers = Array.from({ length: 15 }, () =>
     Math.random() > 0.5 ? "1" : "0"
   );
+
+  // useEffect(() => {
+  //   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  //   if (prefersReducedMotion) return;
+
+  //   // Animate GCOEJ text entrance
+  //   if (gcoejTextRef.current) {
+  //     anime.timeline()
+  //       .add({
+  //         targets: gcoejTextRef.current.children,
+  //         opacity: [0, 1],
+  //         translateY: [-20, 0],
+  //         duration: 800,
+  //         delay: anime.stagger(100),
+  //         easing: 'easeOutExpo',
+  //       });
+  //   }
+
+  //   // Animate main heading with bounce effect
+  //   if (mainHeadingRef.current) {
+  //     anime({
+  //       targets: mainHeadingRef.current,
+  //       scale: [0.8, 1.05, 1],
+  //       opacity: [0, 1],
+  //       duration: 1500,
+  //       delay: 800,
+  //       easing: 'easeOutElastic(1, .8)',
+  //     });
+  //   }
+
+  //   // Animate CTA buttons with stagger
+  //   if (ctaButtonsRef.current) {
+  //     anime({
+  //       targets: ctaButtonsRef.current.querySelectorAll('a'),
+  //       opacity: [0, 1],
+  //       translateY: [30, 0],
+  //       scale: [0.9, 1],
+  //       duration: 800,
+  //       delay: anime.stagger(150, { start: 1500 }),
+  //       easing: 'easeOutExpo',
+  //     });
+  //   }
+  // }, []);
 
   return (
     <section
@@ -348,10 +397,7 @@ const Hero = () => {
       </div>
 
       {/* GCOEJ Text - Below Navbar */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+      <div
         className="relative z-10 pt-20 sm:pt-24 pb-2 sm:pb-4 px-4 text-center"
       >
         <div
@@ -366,7 +412,7 @@ const Hero = () => {
         >
           (An Autonomous Institute of Government of Maharashtra)
         </div>
-        <div
+        <div 
           className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wide text-gray-200 mt-4"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
@@ -375,9 +421,7 @@ const Hero = () => {
         <div className="font-body text-base sm:text-lg md:text-xl font-light italic text-gray-300 mt-1">
           presents
         </div>
-      </motion.div>
-
-      {/* Main Content - Centered */}
+      </div>      {/* Main Content - Centered */}
       <div className="relative z-10 flex-1 flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -387,20 +431,16 @@ const Hero = () => {
             className="space-y-6"
           >
             {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
+            <h1
               className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-wider"
             >
               <span className="block gradient-text">Tech Fest 2025</span>
-              {/* <span className="block text-white mt-2">2025</span> */}
-            </motion.h1>
+            </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ delay: 1.2 }}
               className="font-heading text-xl sm:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-400 font-bold tracking-wide capitalize"
             >
               Institute Level Technical Events
@@ -410,7 +450,7 @@ const Hero = () => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.9 }}
+              transition={{ delay: 1.4 }}
               className="max-w-3xl mx-auto text-base sm:text-lg text-gray-300 leading-relaxed"
             >
               A celebration of innovation, creativity, and engineering
@@ -422,7 +462,7 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1 }}
+              transition={{ delay: 1.6 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-200"
             >
               <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700">
@@ -436,17 +476,14 @@ const Hero = () => {
             </motion.div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.3 }}
+            <div
               className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4"
             >
               <motion.a
                 href="#events"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full font-semibold text-white text-center overflow-hidden glow-effect"
+                className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full font-semibold text-white text-center overflow-hidden glow-effect opacity-0"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   Register Now
@@ -458,11 +495,11 @@ const Hero = () => {
                 href="#events"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-neon-purple hover:bg-neon-purple/10 rounded-full font-semibold text-white text-center transition-all duration-300"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-neon-purple hover:bg-neon-purple/10 rounded-full font-semibold text-white text-center transition-all duration-300 opacity-0"
               >
                 Explore Events
               </motion.a>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
