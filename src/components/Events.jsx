@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+// import anime from "animejs";
 import {
   Code,
   Cpu,
@@ -14,6 +15,49 @@ import {
 const Events = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const cardsRef = useRef([]);
+
+  // Anime.js entrance animations when cards come into view
+  // useEffect(() => {
+  //   if (!isInView) return;
+
+  //   const prefersReducedMotion = window.matchMedia(
+  //     "(prefers-reduced-motion: reduce)"
+  //   ).matches;
+  //   if (prefersReducedMotion) return;
+
+  //   // Staggered card entrance animation
+  //   anime({
+  //     targets: cardsRef.current,
+  //     opacity: [0, 1],
+  //     translateY: [60, 0],
+  //     rotateX: [-15, 0],
+  //     scale: [0.9, 1],
+  //     duration: 1000,
+  //     delay: anime.stagger(150, { start: 300 }),
+  //     easing: "easeOutExpo",
+  //   });
+
+  //   // Animate icons with bounce
+  //   anime({
+  //     targets: ".event-icon",
+  //     scale: [0, 1],
+  //     rotate: [180, 0],
+  //     duration: 800,
+  //     delay: anime.stagger(150, { start: 600 }),
+  //     easing: "easeOutElastic(1, .6)",
+  //   });
+
+  //   // Animate event numbers
+  //   anime({
+  //     targets: ".event-number",
+  //     opacity: [0, 1],
+  //     scale: [1.5, 1],
+  //     duration: 600,
+  //     delay: anime.stagger(150, { start: 500 }),
+  //     easing: "easeOutQuad",
+  //   });
+  // }, [isInView]);
 
   const events = [
     {
@@ -140,9 +184,47 @@ const Events = () => {
             return (
               <motion.div
                 key={event.id}
+                ref={(el) => (cardsRef.current[index] = el)}
                 variants={cardVariants}
                 whileHover={{ y: -8, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                // onMouseEnter={(e) => {
+                //   // Anime.js hover effect
+                //   const card = e.currentTarget;
+                //   const icon = card.querySelector(".event-icon");
+                //   const topAccent = card.querySelector(".top-accent");
+                //   const particles = card.querySelectorAll(".event-particle");
+                  
+                //   if (icon) {
+                //     anime({
+                //       targets: icon,
+                //       rotate: [0, 360],
+                //       scale: [1, 1.2, 1],
+                //       duration: 600,
+                //       easing: "easeOutElastic(1, .6)",
+                //     });
+                //   }
+                //   if (topAccent) {
+                //     anime({
+                //       targets: topAccent,
+                //       scaleX: [0, 1],
+                //       duration: 400,
+                //       easing: "easeOutExpo",
+                //     });
+                //   }
+                //   if (particles.length) {
+                //     anime({
+                //       targets: particles,
+                //       opacity: [0, 1, 0],
+                //       translateY: [-20, -60],
+                //       translateX: () => anime.random(-20, 20),
+                //       scale: [0, 1, 0.5],
+                //       duration: 1000,
+                //       delay: anime.stagger(100),
+                //       easing: "easeOutQuad",
+                //     });
+                //   }
+                // }}
                 className="group relative bg-gray-900/40 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-gray-800 hover:border-cyan-500/50 transition-all duration-500 overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20"
               >
                 {/* Animated Background Gradient */}
@@ -152,7 +234,7 @@ const Events = () => {
 
                 {/* Top Accent Line */}
                 <div
-                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${event.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}
+                  className={`top-accent absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${event.color} transform scale-x-0 transition-transform duration-500 origin-left`}
                 ></div>
 
                 {/* Card Content */}
@@ -160,7 +242,7 @@ const Events = () => {
                   {/* Icon Container */}
                   <div className="flex items-start justify-between mb-4 sm:mb-6">
                     <div
-                      className={`relative w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${event.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-cyan-500/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
+                      className={`event-icon relative w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${event.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-cyan-500/50 transition-all duration-500`}
                     >
                       <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                       {/* Icon Glow */}
@@ -170,7 +252,9 @@ const Events = () => {
                     </div>
 
                     {/* Event Number Badge */}
-                    <div className="font-display text-6xl sm:text-7xl font-black text-gray-800/30 group-hover:text-cyan-500/20 transition-colors duration-500">
+                    <div
+                      className="event-number font-display text-6xl sm:text-7xl font-black text-gray-800/30 group-hover:text-cyan-500/20 transition-colors duration-500"
+                    >
                       0{event.id}
                     </div>
                   </div>
@@ -207,12 +291,35 @@ const Events = () => {
                   className={`absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-tl ${event.color} rounded-tl-full opacity-0 group-hover:opacity-10 transition-all duration-500 transform translate-x-12 translate-y-12 group-hover:translate-x-0 group-hover:translate-y-0`}
                 ></div>
 
-                {/* Particle Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+                {/* Shooting Stars Effect on Hover */}
+                <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                  {[...Array(4)].map((_, i) => (
+                    <div
+                      key={i}
+                      className={`absolute w-1 h-12 bg-gradient-to-b ${event.color} opacity-0 group-hover:opacity-100 group-hover:animate-shoot-star rounded-full blur-sm`}
+                      style={{
+                        left: `${20 + i * 25}%`,
+                        top: "-10%",
+                        animationDelay: `${i * 0.15}s`,
+                        animationDuration: "1.5s",
+                      }}
+                    ></div>
+                  ))}
+                </div>
+
+                {/* Glowing Dots Grid */}
+                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+                  <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+                  <div className="absolute bottom-4 right-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: "0.6s" }}></div>
+                </div>
+
+                {/* Scanning Line Effect */}
+                <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100">
                   <div
-                    className="absolute top-3/4 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping"
-                    style={{ animationDelay: "0.5s" }}
+                    className={`absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent group-hover:animate-scan-line`}
+                    style={{ top: "0%" }}
                   ></div>
                 </div>
               </motion.div>
