@@ -1,34 +1,36 @@
-import { useEffect, useRef } from 'react';
-import anime from 'animejs';
+import { useEffect, useRef } from "react";
+import anime from "animejs";
 
 /**
  * Animated text component with various effects
  */
-const AnimeText = ({ 
-  children, 
-  effect = 'fadeUp', 
-  delay = 0, 
+const AnimeText = ({
+  children,
+  effect = "fadeUp",
+  delay = 0,
   duration = 1000,
-  className = '',
+  className = "",
   stagger = 50,
 }) => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     if (prefersReducedMotion) return;
 
     if (!textRef.current) return;
 
     // Split text into characters for animation
     const text = textRef.current.textContent;
-    textRef.current.innerHTML = '';
-    
+    textRef.current.innerHTML = "";
+
     // Create spans for each character
-    const chars = text.split('').map((char) => {
-      const span = document.createElement('span');
-      span.textContent = char === ' ' ? '\u00A0' : char;
-      span.style.display = 'inline-block';
+    const chars = text.split("").map((char) => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char;
+      span.style.display = "inline-block";
       return span;
     });
 
@@ -65,11 +67,11 @@ const AnimeText = ({
 
     // Apply animation
     anime({
-      targets: textRef.current.querySelectorAll('span'),
+      targets: textRef.current.querySelectorAll("span"),
       ...animations[effect],
       duration,
       delay: anime.stagger(stagger, { start: delay }),
-      easing: 'easeOutExpo',
+      easing: "easeOutExpo",
     });
   }, [effect, delay, duration, stagger]);
 

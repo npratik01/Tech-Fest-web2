@@ -77,7 +77,6 @@ const Hero = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 animated-background"></div>
-
       {/* Circuit Board Lines - Animated */}
       <div className="absolute inset-0 opacity-20 overflow-hidden">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -198,7 +197,6 @@ const Hero = () => {
           />
         </svg>
       </div>
-
       {/* Floating Tech Symbols */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {techSymbols.map((symbol, index) => (
@@ -225,7 +223,6 @@ const Hero = () => {
           </motion.div>
         ))}
       </div>
-
       {/* Binary Rain Effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {binaryNumbers.map((num, index) => (
@@ -255,7 +252,6 @@ const Hero = () => {
           </motion.div>
         ))}
       </div>
-
       {/* Geometric Shapes - Hexagons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(6)].map((_, index) => (
@@ -291,7 +287,6 @@ const Hero = () => {
           </motion.div>
         ))}
       </div>
-
       {/* Floating Data Nodes with Connection Lines */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
         <svg className="w-full h-full">
@@ -382,7 +377,6 @@ const Hero = () => {
           })}
         </svg>
       </div>
-
       {/* Floating Shapes - Responsive */}
       <div className="floating-shapes">
         <div className="shape w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-neon-blue top-10 sm:top-20 left-5 sm:left-10 animate-float"></div>
@@ -395,11 +389,8 @@ const Hero = () => {
           style={{ animationDelay: "4s" }}
         ></div>
       </div>
-
       {/* GCOEJ Text - Below Navbar */}
-      <div
-        className="relative z-10 pt-20 sm:pt-24 pb-2 sm:pb-4 px-4 text-center"
-      >
+      <div className="relative z-10 pt-20 sm:pt-24 pb-2 sm:pb-4 px-4 text-center">
         <div
           className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider text-gray-50 mt-2"
           style={{ fontFamily: "'Lora', serif" }}
@@ -412,7 +403,7 @@ const Hero = () => {
         >
           (An Autonomous Institute of Government of Maharashtra)
         </div>
-        <div 
+        <div
           className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wide text-gray-200 mt-4"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
@@ -421,7 +412,8 @@ const Hero = () => {
         <div className="font-body text-base sm:text-lg md:text-xl font-light italic text-gray-300 mt-1">
           presents
         </div>
-      </div>      {/* Main Content - Centered */}
+      </div>{" "}
+      {/* Main Content - Centered */}
       <div className="relative z-10 flex-1 flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -431,9 +423,7 @@ const Hero = () => {
             className="space-y-6"
           >
             {/* Main Heading */}
-            <h1
-              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-wider"
-            >
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-wider">
               <span className="block gradient-text">Tech Fest 2025</span>
             </h1>
 
@@ -476,9 +466,7 @@ const Hero = () => {
             </motion.div>
 
             {/* CTA Buttons */}
-            <div
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4"
-            >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4">
               <motion.a
                 href="#events"
                 whileHover={{ scale: 1.05 }}

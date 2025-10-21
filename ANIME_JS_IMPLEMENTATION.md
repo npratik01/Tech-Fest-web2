@@ -1,17 +1,20 @@
 # Anime.js Implementation Guide
 
 ## Overview
+
 Your website now includes anime.js animations that are beautifully integrated, smooth, and optimized for mobile devices.
 
 ## What's Been Added
 
 ### 1. **AnimeBackground Component** (`src/components/AnimeBackground.jsx`)
+
 - Floating particle system with anime.js
 - Automatically reduces particle count on mobile (30 particles) vs desktop (60 particles)
 - Particles animate with pulsing opacity and size
 - Performance-optimized with canvas rendering
 
 ### 2. **AnimeText Component** (`src/components/AnimeText.jsx`)
+
 - Animated text with character-by-character effects
 - Multiple animation effects available:
   - `fadeUp`: Fade in while sliding up
@@ -22,6 +25,7 @@ Your website now includes anime.js animations that are beautifully integrated, s
   - `wave`: Wave motion effect
 
 **Usage Example:**
+
 ```jsx
 <AnimeText effect="fadeUp" delay={200} stagger={30}>
   Your Text Here
@@ -29,42 +33,58 @@ Your website now includes anime.js animations that are beautifully integrated, s
 ```
 
 ### 3. **Custom Hooks** (`src/hooks/useAnime.js`)
+
 Three powerful hooks for anime.js animations:
 
 #### `useAnime(animationConfig, dependencies)`
+
 ```jsx
-const ref = useAnime({
-  opacity: [0, 1],
-  translateY: [-20, 0],
-  duration: 1000,
-  easing: 'easeOutExpo'
-}, []);
+const ref = useAnime(
+  {
+    opacity: [0, 1],
+    translateY: [-20, 0],
+    duration: 1000,
+    easing: "easeOutExpo",
+  },
+  []
+);
 ```
 
 #### `useStaggerAnime(selector, animationConfig, trigger)`
+
 ```jsx
-const containerRef = useStaggerAnime('.item', {
-  opacity: [0, 1],
-  translateY: [20, 0],
-  stagger: 100,
-  duration: 800
-}, true);
+const containerRef = useStaggerAnime(
+  ".item",
+  {
+    opacity: [0, 1],
+    translateY: [20, 0],
+    stagger: 100,
+    duration: 800,
+  },
+  true
+);
 ```
 
 #### `useScrollAnime(animationConfig, options)`
+
 ```jsx
-const ref = useScrollAnime({
-  opacity: [0, 1],
-  scale: [0.8, 1],
-  duration: 1000
-}, {
-  threshold: 0.1,
-  once: true
-});
+const ref = useScrollAnime(
+  {
+    opacity: [0, 1],
+    scale: [0.8, 1],
+    duration: 1000,
+  },
+  {
+    threshold: 0.1,
+    once: true,
+  }
+);
 ```
 
 ### 4. **Enhanced Hero Component**
+
 The Hero component now includes:
+
 - Staggered text animation for GCOEJ name
 - Elastic bounce effect on main heading
 - Smooth CTA button entrance with stagger
@@ -81,14 +101,15 @@ The Hero component now includes:
 ## How to Use in Other Components
 
 ### Example 1: Animate on Scroll
+
 ```jsx
-import { useScrollAnime } from '../hooks/useAnime';
+import { useScrollAnime } from "../hooks/useAnime";
 
 function MyComponent() {
   const ref = useScrollAnime({
     opacity: [0, 1],
     translateY: [50, 0],
-    duration: 1000
+    duration: 1000,
   });
 
   return <div ref={ref}>Content here</div>;
@@ -96,16 +117,21 @@ function MyComponent() {
 ```
 
 ### Example 2: Stagger Animation
+
 ```jsx
-import { useStaggerAnime } from '../hooks/useAnime';
+import { useStaggerAnime } from "../hooks/useAnime";
 
 function MyList() {
-  const ref = useStaggerAnime('.list-item', {
-    opacity: [0, 1],
-    translateX: [-30, 0],
-    stagger: 100,
-    duration: 600
-  }, true);
+  const ref = useStaggerAnime(
+    ".list-item",
+    {
+      opacity: [0, 1],
+      translateX: [-30, 0],
+      stagger: 100,
+      duration: 600,
+    },
+    true
+  );
 
   return (
     <div ref={ref}>
@@ -118,26 +144,31 @@ function MyList() {
 ```
 
 ### Example 3: Complex Timeline
+
 ```jsx
-import anime from 'animejs/lib/anime.es.js';
-import { useEffect, useRef } from 'react';
+import anime from "animejs/lib/anime.es.js";
+import { useEffect, useRef } from "react";
 
 function MyComponent() {
   const ref = useRef(null);
 
   useEffect(() => {
-    anime.timeline()
+    anime
+      .timeline()
       .add({
-        targets: ref.current.querySelector('.title'),
+        targets: ref.current.querySelector(".title"),
         opacity: [0, 1],
         translateY: [-30, 0],
-        duration: 800
+        duration: 800,
       })
-      .add({
-        targets: ref.current.querySelector('.subtitle'),
-        opacity: [0, 1],
-        duration: 600
-      }, '-=400');
+      .add(
+        {
+          targets: ref.current.querySelector(".subtitle"),
+          opacity: [0, 1],
+          duration: 600,
+        },
+        "-=400"
+      );
   }, []);
 
   return (
@@ -171,8 +202,11 @@ function MyComponent() {
 ## Accessibility
 
 All animations automatically respect the user's motion preferences:
+
 ```javascript
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 ```
 
 When reduced motion is preferred, animations are skipped entirely.
@@ -189,16 +223,19 @@ When reduced motion is preferred, animations are skipped entirely.
 ## Troubleshooting
 
 **Q: Animations not playing?**
+
 - Check browser console for errors
 - Verify refs are attached correctly
 - Ensure elements exist when animation runs
 
 **Q: Performance issues?**
+
 - Reduce number of animated elements
 - Increase duration (slower = less processing)
 - Check for conflicting CSS animations
 
 **Q: Animations look janky on mobile?**
+
 - Use `will-change` sparingly
 - Avoid animating too many properties at once
 - Test with Chrome DevTools mobile throttling
@@ -206,6 +243,7 @@ When reduced motion is preferred, animations are skipped entirely.
 ## Next Steps
 
 You can now:
+
 1. Add scroll-triggered animations to Events section
 2. Enhance Science Exhibition with timeline animations
 3. Add hover effects with anime.js to cards

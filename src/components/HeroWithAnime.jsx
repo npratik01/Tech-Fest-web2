@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
-import anime from 'animejs';
-import AnimeText from './AnimeText';
+import anime from "animejs";
+import AnimeText from "./AnimeText";
 
 const HeroWithAnime = () => {
   const techSymbolsRef = useRef(null);
@@ -26,55 +26,58 @@ const HeroWithAnime = () => {
   ];
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     if (prefersReducedMotion) return;
 
     // Animate tech symbols with anime.js
     if (techSymbolsRef.current) {
-      const symbols = techSymbolsRef.current.querySelectorAll('.tech-symbol');
-      
+      const symbols = techSymbolsRef.current.querySelectorAll(".tech-symbol");
+
       anime({
         targets: symbols,
         translateY: [
           { value: -20, duration: 0 },
-          { value: -100, duration: 3000 }
+          { value: -100, duration: 3000 },
         ],
         opacity: [
           { value: 0, duration: 0 },
           { value: 0.5, duration: 1000 },
-          { value: 0, duration: 2000 }
+          { value: 0, duration: 2000 },
         ],
         rotate: {
           value: 360,
           duration: 4000,
-          easing: 'linear'
+          easing: "linear",
         },
         loop: true,
         delay: anime.stagger(500),
-        easing: 'linear',
+        easing: "linear",
       });
     }
 
     // Animate floating shapes
     if (floatingShapesRef.current) {
-      const shapes = floatingShapesRef.current.querySelectorAll('.floating-shape');
-      
+      const shapes =
+        floatingShapesRef.current.querySelectorAll(".floating-shape");
+
       shapes.forEach((shape, index) => {
         anime({
           targets: shape,
           translateY: [
-            { value: -30, duration: 4000, easing: 'easeInOutSine' },
-            { value: 30, duration: 4000, easing: 'easeInOutSine' },
-            { value: 0, duration: 4000, easing: 'easeInOutSine' }
+            { value: -30, duration: 4000, easing: "easeInOutSine" },
+            { value: 30, duration: 4000, easing: "easeInOutSine" },
+            { value: 0, duration: 4000, easing: "easeInOutSine" },
           ],
           translateX: [
-            { value: 30, duration: 4000, easing: 'easeInOutSine' },
-            { value: -30, duration: 4000, easing: 'easeInOutSine' },
-            { value: 0, duration: 4000, easing: 'easeInOutSine' }
+            { value: 30, duration: 4000, easing: "easeInOutSine" },
+            { value: -30, duration: 4000, easing: "easeInOutSine" },
+            { value: 0, duration: 4000, easing: "easeInOutSine" },
           ],
           scale: [
-            { value: 1.1, duration: 6000, easing: 'easeInOutQuad' },
-            { value: 1, duration: 6000, easing: 'easeInOutQuad' }
+            { value: 1.1, duration: 6000, easing: "easeInOutQuad" },
+            { value: 1, duration: 6000, easing: "easeInOutQuad" },
           ],
           loop: true,
           delay: index * 1000,
@@ -84,23 +87,28 @@ const HeroWithAnime = () => {
 
     // Animate main content entrance
     if (mainContentRef.current) {
-      anime.timeline()
+      anime
+        .timeline()
         .add({
-          targets: mainContentRef.current.querySelector('.main-heading'),
+          targets: mainContentRef.current.querySelector(".main-heading"),
           opacity: [0, 1],
           translateY: [50, 0],
           scale: [0.9, 1],
           duration: 1200,
-          easing: 'easeOutExpo',
+          easing: "easeOutExpo",
         })
-        .add({
-          targets: mainContentRef.current.querySelectorAll('.animate-element'),
-          opacity: [0, 1],
-          translateY: [30, 0],
-          duration: 800,
-          delay: anime.stagger(150),
-          easing: 'easeOutExpo',
-        }, '-=800');
+        .add(
+          {
+            targets:
+              mainContentRef.current.querySelectorAll(".animate-element"),
+            opacity: [0, 1],
+            translateY: [30, 0],
+            duration: 800,
+            delay: anime.stagger(150),
+            easing: "easeOutExpo",
+          },
+          "-=800"
+        );
     }
   }, []);
 
@@ -129,31 +137,53 @@ const HeroWithAnime = () => {
             </linearGradient>
           </defs>
           <motion.line
-            x1="0" y1="20%" x2="100%" y2="20%"
+            x1="0"
+            y1="20%"
+            x2="100%"
+            y2="20%"
             stroke="url(#circuitGradient)"
             strokeWidth="1"
             animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
             transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
           />
           <motion.line
-            x1="0" y1="40%" x2="100%" y2="40%"
+            x1="0"
+            y1="40%"
+            x2="100%"
+            y2="40%"
             stroke="url(#circuitGradient)"
             strokeWidth="1"
             animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 1 }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 1,
+            }}
           />
           <motion.line
-            x1="0" y1="60%" x2="100%" y2="60%"
+            x1="0"
+            y1="60%"
+            x2="100%"
+            y2="60%"
             stroke="url(#circuitGradient)"
             strokeWidth="1"
             animate={{ pathLength: [0, 1], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: "linear", delay: 0.5 }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "linear",
+              delay: 0.5,
+            }}
           />
         </svg>
       </div>
 
       {/* Floating Tech Symbols with Anime.js */}
-      <div ref={techSymbolsRef} className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        ref={techSymbolsRef}
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+      >
         {techSymbols.map((symbol, index) => (
           <div
             key={`symbol-${index}`}
@@ -177,8 +207,8 @@ const HeroWithAnime = () => {
 
       {/* GCOEJ Text */}
       <div className="relative z-10 pt-20 sm:pt-24 pb-2 sm:pb-4 px-4 text-center">
-        <AnimeText 
-          effect="fadeUp" 
+        <AnimeText
+          effect="fadeUp"
           delay={200}
           stagger={30}
           className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider text-gray-50 mt-2"
@@ -194,7 +224,7 @@ const HeroWithAnime = () => {
         >
           (An Autonomous Institute of Government of Maharashtra)
         </AnimeText>
-        <AnimeText 
+        <AnimeText
           effect="scale"
           delay={1200}
           className="text-xl sm:text-2xl md:text-3xl font-bold tracking-wide text-gray-200 mt-4 block"
@@ -212,7 +242,10 @@ const HeroWithAnime = () => {
       </div>
 
       {/* Main Content */}
-      <div ref={mainContentRef} className="relative z-10 flex-1 flex items-center justify-center">
+      <div
+        ref={mainContentRef}
+        className="relative z-10 flex-1 flex items-center justify-center"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             {/* Main Heading */}

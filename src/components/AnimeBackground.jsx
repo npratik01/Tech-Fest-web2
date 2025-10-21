@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import anime from 'animejs';
+import { useEffect, useRef } from "react";
+import anime from "animejs";
 
 /**
  * Animated background with floating particles using anime.js
@@ -14,7 +14,7 @@ const AnimeBackground = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     let animationFrameId;
 
     // Set canvas size
@@ -23,7 +23,7 @@ const AnimeBackground = () => {
       canvas.height = window.innerHeight;
     };
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
     // Reduce particle count on mobile for performance
     const isMobile = window.innerWidth < 768;
@@ -40,7 +40,9 @@ const AnimeBackground = () => {
           speedX: (Math.random() - 0.5) * 0.5,
           speedY: (Math.random() - 0.5) * 0.5,
           opacity: Math.random() * 0.5 + 0.2,
-          color: ['#00f0ff', '#a855f7', '#ec4899'][Math.floor(Math.random() * 3)],
+          color: ["#00f0ff", "#a855f7", "#ec4899"][
+            Math.floor(Math.random() * 3)
+          ],
         });
       }
     };
@@ -53,7 +55,7 @@ const AnimeBackground = () => {
         opacity: [particle.opacity, particle.opacity * 0.3, particle.opacity],
         size: [particle.size, particle.size * 1.5, particle.size],
         duration: 3000 + Math.random() * 2000,
-        easing: 'easeInOutSine',
+        easing: "easeInOutSine",
         loop: true,
         delay: index * 50,
       });
@@ -90,7 +92,7 @@ const AnimeBackground = () => {
 
     // Cleanup
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationFrameId);
       if (animationRef.current) {
         animationRef.current.pause();

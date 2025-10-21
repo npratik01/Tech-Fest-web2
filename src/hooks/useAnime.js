@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import anime from 'animejs';
+import { useEffect, useRef } from "react";
+import anime from "animejs";
 
 /**
  * Custom hook for anime.js animations
@@ -11,8 +11,10 @@ export const useAnime = (animationConfig, dependencies = []) => {
 
   useEffect(() => {
     // Check if user prefers reduced motion
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     if (prefersReducedMotion) {
       return; // Skip animations for accessibility
     }
@@ -23,9 +25,10 @@ export const useAnime = (animationConfig, dependencies = []) => {
         targets: elementRef.current,
         ...animationConfig,
         // Auto-optimize for mobile
-        duration: typeof animationConfig.duration === 'number' 
-          ? animationConfig.duration 
-          : 1000,
+        duration:
+          typeof animationConfig.duration === "number"
+            ? animationConfig.duration
+            : 1000,
       });
     }
 
@@ -47,15 +50,17 @@ export const useStaggerAnime = (selector, animationConfig, trigger = true) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     if (prefersReducedMotion || !trigger) {
       return;
     }
 
     if (containerRef.current) {
       const elements = containerRef.current.querySelectorAll(selector);
-      
+
       anime({
         targets: elements,
         ...animationConfig,
@@ -76,8 +81,10 @@ export const useScrollAnime = (animationConfig, options = {}) => {
   const hasAnimated = useRef(false);
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     if (prefersReducedMotion) {
       return;
     }
@@ -89,7 +96,7 @@ export const useScrollAnime = (animationConfig, options = {}) => {
             if (options.once !== false) {
               hasAnimated.current = true;
             }
-            
+
             animationRef.current = anime({
               targets: elementRef.current,
               ...animationConfig,
@@ -99,7 +106,7 @@ export const useScrollAnime = (animationConfig, options = {}) => {
       },
       {
         threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px',
+        rootMargin: options.rootMargin || "0px",
       }
     );
 
