@@ -7,6 +7,7 @@ Replaced the simple circular effects with **3 amazing new hover effects** using 
 ## 🌟 The New Effects
 
 ### 1. **Shooting Stars ⭐**
+
 - **4 colorful shooting stars** streak diagonally across the card
 - Each star uses the event's unique gradient color
 - Staggered timing (0s, 0.15s, 0.3s, 0.45s)
@@ -17,6 +18,7 @@ Replaced the simple circular effects with **3 amazing new hover effects** using 
 **Visual**: Like mini meteors shooting across space!
 
 ### 2. **Glowing Corner Dots 💡**
+
 - **4 pulsing dots** in each corner of the card
 - Different colors: Cyan, Blue, Purple, Pink
 - Each dot pulses at different intervals
@@ -27,6 +29,7 @@ Replaced the simple circular effects with **3 amazing new hover effects** using 
 **Visual**: Like tech nodes lighting up in sequence!
 
 ### 3. **Scanning Line 📡**
+
 - Horizontal **cyan gradient line** sweeps from top to bottom
 - Creates a "scanning" or "analyzing" effect
 - **Duration**: 2 seconds continuous loop
@@ -56,6 +59,7 @@ All effects **loop continuously** while hovering!
 ## 🎨 Visual Breakdown
 
 ### Shooting Stars Pattern:
+
 ```
   ⭐ (0s)
        ⭐ (0.15s)
@@ -64,6 +68,7 @@ All effects **loop continuously** while hovering!
 ```
 
 ### Corner Dots Layout:
+
 ```
 💡 (cyan)         💡 (blue)
 
@@ -72,6 +77,7 @@ All effects **loop continuously** while hovering!
 ```
 
 ### Scanning Line:
+
 ```
 ━━━━━━━━━━━━━━━━━  (sweeps down)
 ```
@@ -81,6 +87,7 @@ All effects **loop continuously** while hovering!
 ### CSS Keyframes Used:
 
 #### 1. Shoot Star Animation
+
 ```css
 @keyframes shoot-star {
   0%   → Start invisible at top-left
@@ -91,6 +98,7 @@ All effects **loop continuously** while hovering!
 ```
 
 #### 2. Scan Line Animation
+
 ```css
 @keyframes scan-line {
   0%   → Top of card
@@ -99,6 +107,7 @@ All effects **loop continuously** while hovering!
 ```
 
 #### 3. Pulse (Built-in Tailwind)
+
 ```css
 animate-pulse → Fades between opacity levels
 ```
@@ -117,11 +126,13 @@ Each effect uses the event's unique color:
 ## 💡 Why These Effects?
 
 ### ❌ Old Effect (Circles):
+
 - Simple pulse rings
 - Static position
 - Less engaging
 
 ### ✅ New Effects:
+
 - **Dynamic movement** (shooting stars)
 - **Multi-point interest** (corner dots)
 - **Tech aesthetic** (scanning line)
@@ -139,6 +150,7 @@ Each effect uses the event's unique color:
 ## 🎪 Effect Stack (All Active on Hover)
 
 From back to front:
+
 1. **Background gradient fade** (existing)
 2. **Bottom corner accent** (existing)
 3. **Shooting stars** (NEW!)
@@ -152,6 +164,7 @@ From back to front:
 ## 🌈 Design Philosophy
 
 **Theme**: "Futuristic Tech Scanner"
+
 - Shooting stars = Data packets flying
 - Corner dots = Network nodes lighting up
 - Scanning line = System analyzing content
@@ -160,6 +173,7 @@ From back to front:
 ## 🚀 Result
 
 Your event cards now feel:
+
 - ⚡ **More dynamic** with movement
 - 🎯 **More engaging** with multiple focal points
 - 🔮 **More futuristic** with scanning effects
@@ -168,6 +182,7 @@ Your event cards now feel:
 ## 🎉 Best Part
 
 All these effects are:
+
 - Pure CSS (no library conflicts!)
 - Performant (60fps smooth)
 - Accessible (respects user preferences)

@@ -7,6 +7,7 @@ Your Events section now features stunning anime.js animations that bring the car
 ## 🎬 Entrance Animations (On Scroll)
 
 ### 1. **Staggered Card Entrance**
+
 - Cards fade in and slide up from below
 - 3D rotation effect (rotateX) for depth
 - Scale animation from 90% to 100%
@@ -14,6 +15,7 @@ Your Events section now features stunning anime.js animations that bring the car
 - Duration: 1000ms with `easeOutExpo` easing
 
 ### 2. **Icon Spin Animation**
+
 - Icons scale from 0 to full size
 - 180° rotation entrance
 - Elastic bounce effect
@@ -21,6 +23,7 @@ Your Events section now features stunning anime.js animations that bring the car
 - Easing: `easeOutElastic(1, .6)`
 
 ### 3. **Event Number Reveal**
+
 - Background numbers fade in with scale effect
 - Start at 150% size, scale down to 100%
 - Staggered delay: 500ms + 150ms per card
@@ -29,18 +32,22 @@ Your Events section now features stunning anime.js animations that bring the car
 ## 🎯 Hover Effects (Interactive)
 
 ### 1. **Icon Rotation & Scale**
+
 On hover:
+
 - Icon rotates 360°
 - Scales to 120% then back to 100%
 - Elastic bounce effect
 - Duration: 600ms
 
 ### 2. **Top Accent Line**
+
 - Cyan gradient line sweeps across the top
 - Animates from 0% to 100% width
 - Duration: 400ms with `easeOutExpo`
 
 ### 3. **Floating Particles**
+
 - 6 colorful particles shoot upward on hover
 - Random horizontal movement
 - Fade in, then fade out
@@ -48,11 +55,13 @@ On hover:
 - Each particle travels -20px to -60px upward
 
 ### 4. **Pulse Ring**
+
 - Cyan ring emanates from the center
 - CSS animate-ping for continuous pulsing
 - Only visible on hover
 
 ### 5. **Framer Motion Effects**
+
 - Card lifts up by 8px
 - Scales to 102%
 - Shadow expands with cyan glow
@@ -60,6 +69,7 @@ On hover:
 ## 📱 Mobile Optimization
 
 All animations respect:
+
 - ✅ `prefers-reduced-motion` accessibility setting
 - ✅ Smooth 60fps performance
 - ✅ GPU acceleration
@@ -68,6 +78,7 @@ All animations respect:
 ## 🎨 Visual Features
 
 ### Card Components:
+
 1. **Gradient Background** - Fades in on hover
 2. **Icon Glow** - Blur effect intensifies
 3. **Number Badge** - Changes color on hover
@@ -77,6 +88,7 @@ All animations respect:
 ## 🔧 Technical Implementation
 
 ### Key Anime.js Features Used:
+
 - `anime.stagger()` - Sequential delays
 - `anime.random()` - Random particle movement
 - `easeOutExpo` - Smooth deceleration
@@ -84,6 +96,7 @@ All animations respect:
 - `easeOutQuad` - Natural motion
 
 ### Event Handlers:
+
 ```javascript
 onMouseEnter={(e) => {
   // Triggers multiple simultaneous animations
@@ -96,6 +109,7 @@ onMouseEnter={(e) => {
 ## 🎭 Animation Timeline
 
 ### On Scroll Into View:
+
 ```
 0ms     → Start
 300ms   → Cards begin appearing (staggered)
@@ -105,6 +119,7 @@ onMouseEnter={(e) => {
 ```
 
 ### On Hover:
+
 ```
 0ms     → Hover detected
 0ms     → Icon rotation starts
@@ -124,6 +139,7 @@ onMouseEnter={(e) => {
 ## 🎪 Effect Combinations
 
 Each card combines:
+
 - **3 entrance animations** (card, icon, number)
 - **5 hover effects** (icon, line, particles, ring, shadow)
 - **5 static effects** (gradients, glows, accents)
@@ -141,6 +157,7 @@ Total: **13 simultaneous animation effects per card!**
 ## 🌈 Color Gradients
 
 Each event has unique gradient:
+
 1. **Coding** - Blue → Cyan
 2. **Hackathon** - Purple → Pink
 3. **Innovation** - Yellow → Orange
@@ -153,6 +170,7 @@ All effects use the event's gradient for consistency!
 ## 🎉 Result
 
 Your Events section now features:
+
 - Professional entrance animations
 - Delightful hover interactions
 - Smooth 60fps performance

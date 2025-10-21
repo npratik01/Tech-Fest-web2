@@ -194,7 +194,7 @@ const Events = () => {
                 //   const icon = card.querySelector(".event-icon");
                 //   const topAccent = card.querySelector(".top-accent");
                 //   const particles = card.querySelectorAll(".event-particle");
-                  
+
                 //   if (icon) {
                 //     anime({
                 //       targets: icon,
@@ -252,9 +252,7 @@ const Events = () => {
                     </div>
 
                     {/* Event Number Badge */}
-                    <div
-                      className="event-number font-display text-6xl sm:text-7xl font-black text-gray-800/30 group-hover:text-cyan-500/20 transition-colors duration-500"
-                    >
+                    <div className="event-number font-display text-6xl sm:text-7xl font-black text-gray-800/30 group-hover:text-cyan-500/20 transition-colors duration-500">
                       0{event.id}
                     </div>
                   </div>
@@ -310,9 +308,18 @@ const Events = () => {
                 {/* Glowing Dots Grid */}
                 <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-30 transition-opacity duration-500">
                   <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: "0.2s" }}></div>
-                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: "0.4s" }}></div>
-                  <div className="absolute bottom-4 right-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: "0.6s" }}></div>
+                  <div
+                    className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"
+                    style={{ animationDelay: "0.2s" }}
+                  ></div>
+                  <div
+                    className="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-pulse"
+                    style={{ animationDelay: "0.4s" }}
+                  ></div>
+                  <div
+                    className="absolute bottom-4 right-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse"
+                    style={{ animationDelay: "0.6s" }}
+                  ></div>
                 </div>
 
                 {/* Scanning Line Effect */}
