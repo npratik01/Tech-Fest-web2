@@ -10,6 +10,15 @@ import {
   Zap,
   Trophy,
   ExternalLink,
+  Brain,
+  Plane,
+  Shield,
+  Sparkles,
+  CircuitBoard,
+  Users,
+  Presentation,
+  Microscope,
+  FlaskConical,
 } from "lucide-react";
 
 const Events = () => {
@@ -62,57 +71,113 @@ const Events = () => {
   const events = [
     {
       id: 1,
-      title: "Coding Competition",
+      title: "HackNex",
       description:
-        "Test your programming skills in this challenging competition. Solve complex problems and compete with the best coders.",
+        "24-hour hackathon by COMPACT. Build innovative solutions, collaborate with brilliant minds, and create groundbreaking projects that solve real-world problems.",
       icon: Code,
       color: "from-blue-500 to-cyan-500",
       registerLink: "#register",
+      organizer: "COMPACT",
     },
     {
       id: 2,
-      title: "Hackathon",
+      title: "AeroSim",
       description:
-        "Build innovative solutions in 24 hours. Collaborate, code, and create groundbreaking projects.",
-      icon: Cpu,
+        "Drone simulation event by Team Third Axis. Experience cutting-edge drone technology, simulate flight scenarios, and master aerial navigation.",
+      icon: Plane,
       color: "from-purple-500 to-pink-500",
       registerLink: "#register",
+      organizer: "Team Third Axis",
     },
     {
       id: 3,
-      title: "Innovation Challenge",
+      title: "Mind Quest",
       description:
-        "Present your innovative ideas and solutions to real-world problems. Win exciting prizes!",
-      icon: Lightbulb,
+        "Brain-teasing challenges by MESA. Test your problem-solving skills, logical thinking, and technical aptitude in this exciting quiz competition.",
+      icon: Brain,
       color: "from-yellow-500 to-orange-500",
       registerLink: "#register",
+      organizer: "MESA",
     },
     {
       id: 4,
-      title: "Robotics Workshop",
+      title: "ElectroElite",
       description:
-        "Learn about robotics, automation, and AI. Hands-on experience with cutting-edge technology.",
-      icon: Rocket,
+        "Electronics competition by EESA. Showcase your expertise in circuits, embedded systems, and electronic innovations with hands-on challenges.",
+      icon: CircuitBoard,
       color: "from-green-500 to-emerald-500",
       registerLink: "#register",
+      organizer: "EESA",
     },
     {
       id: 5,
-      title: "Tech Quiz",
+      title: "Evolve",
       description:
-        "Test your technical knowledge across various domains. Compete for the title of Tech Master!",
-      icon: Zap,
+        "Technical competition by Team Trionix. Push the boundaries of innovation, showcase your technical prowess, and evolve your engineering skills.",
+      icon: Sparkles,
       color: "from-red-500 to-pink-500",
       registerLink: "#register",
+      organizer: "Team Trionix",
     },
     {
       id: 6,
-      title: "Project Showcase",
+      title: "Cyber Shield",
       description:
-        "Display your innovative projects and get feedback from industry experts and professors.",
-      icon: Trophy,
+        "Cybersecurity competition by Cyber Security Club. Defend against cyber threats, crack security challenges, and prove your ethical hacking skills.",
+      icon: Shield,
       color: "from-indigo-500 to-purple-500",
       registerLink: "#register",
+      organizer: "Cyber Security Club",
+    },
+    {
+      id: 7,
+      title: "Team Asterix Event",
+      description:
+        "Innovative technical challenge by Team Asterix. Participate in exciting competitions that test your creativity and technical expertise.",
+      icon: Rocket,
+      color: "from-cyan-500 to-blue-500",
+      registerLink: "#register",
+      organizer: "Team Asterix",
+    },
+    {
+      id: 8,
+      title: "CESA Event",
+      description:
+        "Civil Engineering showcase by CESA. Explore structural design, sustainable construction, and innovative civil engineering solutions.",
+      icon: Trophy,
+      color: "from-orange-500 to-red-500",
+      registerLink: "#register",
+      organizer: "CESA",
+    },
+    {
+      id: 9,
+      title: "E-TESA Event",
+      description:
+        "Electronics & Telecommunication event by E-TESA. Dive into communication systems, signal processing, and modern telecom technologies.",
+      icon: Zap,
+      color: "from-pink-500 to-purple-500",
+      registerLink: "#register",
+      organizer: "E-TESA",
+    },
+    {
+      id: 10,
+      title: "Pitching Event",
+      description:
+        "Startup pitch competition by INSAT-A. Present your business ideas, convince investors, and showcase your entrepreneurial vision.",
+      icon: Presentation,
+      color: "from-teal-500 to-cyan-500",
+      registerLink: "#register",
+      organizer: "INSAT-A",
+    },
+    {
+      id: 11,
+      title: "Innovex",
+      description:
+        "Innovation exhibition by INSAT-A. Display your innovative projects, inventions, and ideas. Get feedback from industry experts and professors.",
+      icon: Lightbulb,
+      color: "from-violet-500 to-fuchsia-500",
+      registerLink: "#register",
+      organizer: "INSAT-A",
     },
   ];
 
@@ -261,6 +326,14 @@ const Events = () => {
                   <h3 className="font-heading text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 tracking-wide uppercase">
                     {event.title}
                   </h3>
+
+                  {/* Organizer Badge */}
+                  <div className="mb-3">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-gray-800/60 border border-gray-700 rounded-full text-xs sm:text-sm text-cyan-400 font-medium">
+                      <Users className="w-3 h-3 sm:w-4 sm:h-4" />
+                      {event.organizer}
+                    </span>
+                  </div>
 
                   {/* Description */}
                   <p className="font-body text-gray-400 text-sm sm:text-base mb-6 leading-relaxed line-clamp-3">
