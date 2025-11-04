@@ -457,7 +457,7 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700">
                 <Calendar className="w-5 h-5 text-neon-blue" />
-                <span className="text-sm sm:text-base">14th November 2025</span>
+                <span className="text-sm sm:text-base">13th - 14th November 2025</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full border border-gray-700">
                 <Clock className="w-5 h-5 text-neon-purple" />

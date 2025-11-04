@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import Events from "./components/Events";
 import ScienceExhibition from "./components/ScienceExhibition";
 import AboutUs from "./components/AboutUs";
+import Patrons from "./components/Patrons";
 import Footer from "./components/Footer";
 
 function App() {
@@ -34,8 +35,9 @@ function App() {
         <Navbar />
         <Hero />
         <Events />
-        <ScienceExhibition />
+        {/* <ScienceExhibition /> */}
         <AboutUs />
+        <Patrons />
         <Footer />
       </div>
     </div>

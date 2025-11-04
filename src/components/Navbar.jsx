@@ -17,7 +17,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", href: "#home" },
     { name: "Events", href: "#events" },
-    { name: "Science Exhibition", href: "#science-exhibition" },
+    // { name: "Science Exhibition", href: "#science-exhibition" },
     { name: "About Us", href: "#about" },
   ];
 
