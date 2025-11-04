@@ -187,7 +187,7 @@ const Footer = () => {
           </p>
           <p className="text-gray-400 text-sm text-center">
             Developed by{" "}
-            <span className="text-neon-blue font-semibold">Pratik Nikam</span>
+            <span className="text-neon-blue font-semibold">Techncial Council</span>
           </p>
         </div>
       </div>
