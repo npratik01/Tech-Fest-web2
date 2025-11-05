@@ -433,7 +433,17 @@ const Hero = () => {
               transition={{ delay: 1.2 }}
               className="font-heading text-xl sm:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-400 font-bold tracking-wide capitalize"
             >
-              Institute Level Technical Events
+              Institute Level Technical Festival
+            </motion.p>
+
+            {/* Hashtag */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3 }}
+              className="text-lg sm:text-xl md:text-2xl text-cyan-400 font-semibold tracking-wider"
+            >
+              #ReimagineEngineeringWithAI
             </motion.p>
 
             {/* Description */}

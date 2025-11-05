@@ -61,8 +61,26 @@ const Patrons = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto"
         >
+          {/* Dr. R. B. Kamble */}
+          <div className="text-center">
+            {/* Name */}
+            <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3">
+              Dr. R. B. Kamble
+            </h3>
+
+            {/* Position */}
+            <p className="font-body text-base sm:text-lg text-gray-300 mb-2">
+              Dean Student Activities
+            </p>
+
+            {/* Institution */}
+            <p className="font-body text-sm sm:text-base text-gray-400">
+              Government College of Engineering Jalgaon
+            </p>
+          </div>
+
           {/* Dr. M. S. Patil */}
           <div className="text-center">
             {/* Name */}

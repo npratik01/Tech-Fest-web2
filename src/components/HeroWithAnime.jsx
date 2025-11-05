@@ -254,7 +254,11 @@ const HeroWithAnime = () => {
             </h1>
 
             <p className="animate-element font-heading text-xl sm:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-400 font-bold tracking-wide capitalize opacity-0">
-              Institute Level Technical Events
+              Institute Level Technical Festival
+            </p>
+
+            <p className="animate-element text-lg sm:text-xl md:text-2xl text-cyan-400 font-semibold tracking-wider opacity-0">
+              #ReimagineEngineeringWithAI
             </p>
 
             <p className="animate-element max-w-3xl mx-auto text-base sm:text-lg text-gray-300 leading-relaxed opacity-0">
