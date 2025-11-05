@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 // import anime from "animejs";
 import {
   Code,
@@ -19,6 +20,9 @@ import {
   Presentation,
   Microscope,
   FlaskConical,
+  Car,
+  Construction,
+  Cog,
 } from "lucide-react";
 
 const Events = () => {
@@ -73,17 +77,18 @@ const Events = () => {
       id: 1,
       title: "HackNex",
       description:
-        "24-hour hackathon by COMPACT. Build innovative solutions, collaborate with brilliant minds, and create groundbreaking projects that solve real-world problems.",
+        "24 hrs ultimate hackathon by COMPACT - Computer Association for Creative Technocrats. Build innovative solutions, collaborate with brilliant minds, and create groundbreaking projects.",
       icon: Code,
       color: "from-blue-500 to-cyan-500",
       registerLink: "#register",
       organizer: "COMPACT",
+      detailsLink: "/events/hacknex",
     },
     {
       id: 2,
       title: "AeroSim",
       description:
-        "Drone simulation event by Team Third Axis. Experience cutting-edge drone technology, simulate flight scenarios, and master aerial navigation.",
+        "Time-based drone racing simulation competition by Team Third Axis (Drone Club). Experience cutting-edge drone technology and master aerial racing navigation.",
       icon: Plane,
       color: "from-purple-500 to-pink-500",
       registerLink: "#register",
@@ -91,93 +96,88 @@ const Events = () => {
     },
     {
       id: 3,
-      title: "Mind Quest",
+      title: "RC Car Racing Challenge",
       description:
-        "Brain-teasing challenges by MESA. Test your problem-solving skills, logical thinking, and technical aptitude in this exciting quiz competition.",
-      icon: Brain,
-      color: "from-yellow-500 to-orange-500",
-      registerLink: "#register",
-      organizer: "MESA",
-    },
-    {
-      id: 4,
-      title: "ElectroElite",
-      description:
-        "Electronics competition by EESA. Showcase your expertise in circuits, embedded systems, and electronic innovations with hands-on challenges.",
-      icon: CircuitBoard,
-      color: "from-green-500 to-emerald-500",
-      registerLink: "#register",
-      organizer: "EESA",
-    },
-    {
-      id: 5,
-      title: "Evolve",
-      description:
-        "Technical competition by Team Trionix. Push the boundaries of innovation, showcase your technical prowess, and evolve your engineering skills.",
-      icon: Sparkles,
-      color: "from-red-500 to-pink-500",
-      registerLink: "#register",
-      organizer: "Team Trionix",
-    },
-    {
-      id: 6,
-      title: "Cyber Shield",
-      description:
-        "Cybersecurity competition by Cyber Security Club. Defend against cyber threats, crack security challenges, and prove your ethical hacking skills.",
-      icon: Shield,
-      color: "from-indigo-500 to-purple-500",
-      registerLink: "#register",
-      organizer: "Cyber Security Club",
-    },
-    {
-      id: 7,
-      title: "Team Asterix Event",
-      description:
-        "Innovative technical challenge by Team Asterix. Participate in exciting competitions that test your creativity and technical expertise.",
-      icon: Rocket,
+        "High-speed remote control car racing competition by Team Asterix. Test your driving skills, strategy, and reflexes in this adrenaline-pumping race.",
+      icon: Car,
       color: "from-cyan-500 to-blue-500",
       registerLink: "#register",
       organizer: "Team Asterix",
+      detailsLink: "/events/rc-car-racing",
     },
     {
-      id: 8,
-      title: "CESA Event",
+      id: 4,
+      title: "ElectroQuest",
       description:
-        "Civil Engineering showcase by CESA. Explore structural design, sustainable construction, and innovative civil engineering solutions.",
-      icon: Trophy,
-      color: "from-orange-500 to-red-500",
-      registerLink: "#register",
-      organizer: "CESA",
-    },
-    {
-      id: 9,
-      title: "E-TESA Event",
-      description:
-        "Electronics & Telecommunication event by E-TESA. Dive into communication systems, signal processing, and modern telecom technologies.",
+        "Three-round technical competition by E-TESA to test aptitude, technical knowledge, and practical circuit skills. Encourages analytical thinking, teamwork, and innovation.",
       icon: Zap,
       color: "from-pink-500 to-purple-500",
       registerLink: "#register",
       organizer: "E-TESA",
     },
     {
-      id: 10,
-      title: "Pitching Event",
+      id: 5,
+      title: "Cyber Shield",
       description:
-        "Startup pitch competition by INSAT-A. Present your business ideas, convince investors, and showcase your entrepreneurial vision.",
-      icon: Presentation,
+        "Hands-on cybersecurity event by Cyber Security Club. Identify phishing scams, decode ciphers, and use OSINT to uncover digital clues in this thrilling challenge.",
+      icon: Shield,
+      color: "from-indigo-500 to-purple-500",
+      registerLink: "#register",
+      organizer: "Cyber Security Club",
+      detailsLink: "/events/cyber-shield",
+    },
+    {
+      id: 6,
+      title: "Black Box Control System",
+      description:
+        "Design, build, and control loop event by INSAT-A. Challenge your instrumentation and control system skills in this hands-on technical competition.",
+      icon: Cog,
       color: "from-teal-500 to-cyan-500",
       registerLink: "#register",
       organizer: "INSAT-A",
+      detailsLink: "/events/blackbox-control",
     },
     {
-      id: 11,
-      title: "Innovex",
+      id: 7,
+      title: "Truss Arena",
       description:
-        "Innovation exhibition by INSAT-A. Display your innovative projects, inventions, and ideas. Get feedback from industry experts and professors.",
-      icon: Lightbulb,
-      color: "from-violet-500 to-fuchsia-500",
+        "Design and construct a truss using popsicle sticks by CESA. Build the strongest truss possible with creativity, engineering thinking, and teamwork.",
+      icon: Construction,
+      color: "from-orange-500 to-red-500",
       registerLink: "#register",
-      organizer: "INSAT-A",
+      organizer: "CESA",
+    },
+    {
+      id: 8,
+      title: "Evolve",
+      description:
+        "Three-round technical competition by Team Trionix (EV Club). Push the boundaries of electric vehicle innovation and showcase your technical prowess.",
+      icon: Sparkles,
+      color: "from-red-500 to-pink-500",
+      registerLink: "#register",
+      organizer: "Team Trionix",
+      detailsLink: "/events/evolve",
+    },
+    {
+      id: 9,
+      title: "Mech Mind Quest",
+      description:
+        "Engaging technical competition by MESA to test aptitude, technical knowledge, tool identification, and innovative thinking through a structured three-round format.",
+      icon: Brain,
+      color: "from-yellow-500 to-orange-500",
+      registerLink: "#register",
+      organizer: "MESA",
+      detailsLink: "/events/mech-mind-quest",
+    },
+    {
+      id: 10,
+      title: "Electro Elite",
+      description:
+        "Three-round electrical engineering competition by EESA featuring The Blind Spark, Circuitrix, and Debug the Circuit challenges. Showcase your electrical expertise.",
+      icon: CircuitBoard,
+      color: "from-green-500 to-emerald-500",
+      registerLink: "#register",
+      organizer: "EESA",
     },
   ];
 
@@ -348,12 +348,24 @@ const Events = () => {
                     >
                       Register Now
                     </a>
-                    <button className="sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 border-2 border-gray-700 hover:border-cyan-500 rounded-xl text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center justify-center gap-2 hover:bg-cyan-500/10">
-                      <span className="text-sm sm:text-base font-semibold">
-                        Details
-                      </span>
-                      <ExternalLink className="w-4 h-4" />
-                    </button>
+                    {event.detailsLink ? (
+                      <Link
+                        to={event.detailsLink}
+                        className="sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 border-2 border-gray-700 hover:border-cyan-500 rounded-xl text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center justify-center gap-2 hover:bg-cyan-500/10"
+                      >
+                        <span className="text-sm sm:text-base font-semibold">
+                          Details
+                        </span>
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+                    ) : (
+                      <button className="sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 border-2 border-gray-700 hover:border-cyan-500 rounded-xl text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center justify-center gap-2 hover:bg-cyan-500/10">
+                        <span className="text-sm sm:text-base font-semibold">
+                          Details
+                        </span>
+                        <ExternalLink className="w-4 h-4" />
+                      </button>
+                    )}
                   </div>
                 </div>
 
