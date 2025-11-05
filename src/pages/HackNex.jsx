@@ -78,7 +78,10 @@ const HackNex = () => {
     { time: "11:30 AM - 12:30 PM", event: "Relaxation Break" },
     { time: "12:30 PM - 1:00 PM", event: "Lunch" },
     { time: "1:00 PM Onwards", event: "Final Presentations & Judging" },
-    { time: "After Presentations", event: "Valedictory Ceremony & Prize Distribution" },
+    {
+      time: "After Presentations",
+      event: "Valedictory Ceremony & Prize Distribution",
+    },
   ];
 
   const prizes = [
@@ -133,7 +136,8 @@ const HackNex = () => {
     {
       date: "8th Nov 2025 (10:00 AM)",
       title: "Problem Statement Release",
-      description: "Problem statements and PPT format shared with team leaders via email",
+      description:
+        "Problem statements and PPT format shared with team leaders via email",
     },
     {
       date: "10th Nov 2025 (11:59 PM)",
@@ -148,7 +152,8 @@ const HackNex = () => {
     {
       date: "13th Nov 2025",
       title: "Final Round (On-Campus)",
-      description: "Offline registration at 8:30 AM, followed by inauguration and hackathon start",
+      description:
+        "Offline registration at 8:30 AM, followed by inauguration and hackathon start",
     },
   ];
 
@@ -318,7 +323,9 @@ const HackNex = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-1">
+                        {item.title}
+                      </h3>
                       <p className="text-gray-400">{item.description}</p>
                     </div>
                   </div>
