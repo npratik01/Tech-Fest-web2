@@ -110,11 +110,11 @@ const Events = () => {
       id: 4,
       title: "ElectroQuest",
       description:
-        "Three-round technical competition by E-TESA to test aptitude, technical knowledge, and practical circuit skills. Encourages analytical thinking, teamwork, and innovation.",
+        "Three-round technical competition by e-TESA to test aptitude, technical knowledge, and practical circuit skills. Encourages analytical thinking, teamwork, and innovation.",
       icon: Zap,
       color: "from-pink-500 to-purple-500",
       registerLink: "https://forms.gle/WipLcsSaqgNAQ2Uf9",
-      organizer: "E-TESA",
+      organizer: "e-TESA",
       detailsLink: "/events/electroquest",
     },
     {
@@ -174,7 +174,7 @@ const Events = () => {
     },
     {
       id: 10,
-      title: "Electrolite",
+      title: "Circuitethive",
       description:
         "Three-round electrical engineering competition by EESA featuring The Blind Spark, Circuitrix, and Debug the Circuit challenges. Showcase your electrical expertise.",
       icon: CircuitBoard,

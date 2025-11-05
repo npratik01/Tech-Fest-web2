@@ -127,7 +127,7 @@ const Electrolite = () => {
               <CircuitBoard className="w-20 h-20 text-green-400" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              Electrolite
+              Circuitethive
             </h1>
             <p className="text-2xl text-gray-300 mb-4 font-semibold">
               Electrical Engineering Challenge
@@ -191,7 +191,7 @@ const Electrolite = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              About Electrolite
+              About Circuitethive
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               A comprehensive three-round electrical engineering competition

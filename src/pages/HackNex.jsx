@@ -54,7 +54,7 @@ const HackNex = () => {
     {
       icon: Trophy,
       title: "Win Prizes",
-      description: "Compete for exciting prizes worth ₹50,000+",
+      description: "Compete for exciting prizes worth ₹5,000",
     },
     {
       icon: Zap,
@@ -89,19 +89,14 @@ const HackNex = () => {
 
   const prizes = [
     {
-      place: "1st Prize",
-      amount: "Cash Prize",
+      place: "Winner",
+      amount: "₹3,000",
       color: "from-yellow-500 to-orange-500",
     },
     {
-      place: "2nd Prize",
-      amount: "Cash Prize",
+      place: "Runner-Up",
+      amount: "₹2,000",
       color: "from-gray-400 to-gray-600",
-    },
-    {
-      place: "3rd Prize",
-      amount: "Cash Prize",
-      color: "from-orange-600 to-yellow-700",
     },
     {
       place: "All Participants",
@@ -517,7 +512,17 @@ const HackNex = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-center gap-3 text-gray-300">
                   <Phone className="w-5 h-5 text-cyan-400" />
-                  <span>+91 XXXXX XXXXX</span>
+                  <div className="text-left">
+                    <p className="font-semibold">Shubham Badgujar (President)</p>
+                    <p>+91 95119 74562</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-3 text-gray-300">
+                  <Phone className="w-5 h-5 text-cyan-400" />
+                  <div className="text-left">
+                    <p className="font-semibold">Devesh Jagdale (Vice President)</p>
+                    <p>+91 93220 30778</p>
+                  </div>
                 </div>
                 <div className="flex items-center justify-center gap-3 text-gray-300">
                   <Mail className="w-5 h-5 text-cyan-400" />
