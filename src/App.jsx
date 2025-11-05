@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import LoadingScreen from "./components/LoadingScreen";
 import ParticlesBackground from "./components/ParticlesBackground";
+import ScrollToTop from "./components/ScrollToTop";
 // import AnimeBackground from "./components/AnimeBackground";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -53,15 +54,18 @@ function App() {
   }
 
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/events/hacknex" element={<HackNex />} />
-      <Route path="/events/blackbox-control" element={<BlackBoxControl />} />
-      <Route path="/events/mech-mind-quest" element={<MechMindQuest />} />
-      <Route path="/events/rc-car-racing" element={<RCCarRacing />} />
-      <Route path="/events/evolve" element={<Evolve />} />
-      <Route path="/events/cyber-shield" element={<CyberShield />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/events/hacknex" element={<HackNex />} />
+        <Route path="/events/blackbox-control" element={<BlackBoxControl />} />
+        <Route path="/events/mech-mind-quest" element={<MechMindQuest />} />
+        <Route path="/events/rc-car-racing" element={<RCCarRacing />} />
+        <Route path="/events/evolve" element={<Evolve />} />
+        <Route path="/events/cyber-shield" element={<CyberShield />} />
+      </Routes>
+    </>
   );
 }
 
