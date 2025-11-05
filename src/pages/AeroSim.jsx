@@ -215,13 +215,17 @@ const AeroSim = () => {
             </h2>
             <div className="text-gray-300 text-lg space-y-4">
               <p>
-                AeroSim is a time-based drone racing simulation competition where each player races using the same drone setup in a simulator environment.
+                AeroSim is a time-based drone racing simulation competition
+                where each player races using the same drone setup in a
+                simulator environment.
               </p>
               <p>
-                Participants aim to complete as many laps as possible in 3 minutes, with scoring based on laps completed and time taken.
+                Participants aim to complete as many laps as possible in 3
+                minutes, with scoring based on laps completed and time taken.
               </p>
               <p className="text-purple-400 font-semibold">
-                Experience realistic drone racing without the risk of crashes or damage!
+                Experience realistic drone racing without the risk of crashes or
+                damage!
               </p>
             </div>
           </motion.div>
@@ -407,13 +411,14 @@ const AeroSim = () => {
               </p>
               <p className="flex items-center justify-center gap-2">
                 <Gamepad2 className="w-5 h-5" />
-                <span>Standard controllers provided - Personal controllers not allowed</span>
+                <span>
+                  Standard controllers provided - Personal controllers not
+                  allowed
+                </span>
               </p>
               <p className="flex items-center justify-center gap-2">
                 <MapPin className="w-5 h-5" />
-                <span>
-                  Venue: Government College of Engineering, Jalgaon
-                </span>
+                <span>Venue: Government College of Engineering, Jalgaon</span>
               </p>
             </div>
           </motion.div>

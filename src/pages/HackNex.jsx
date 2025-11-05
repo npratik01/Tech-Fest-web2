@@ -453,7 +453,8 @@ const HackNex = () => {
                   Official Rulebook
                 </h3>
                 <p className="text-gray-400 mb-4">
-                  Download the complete rulebook with all guidelines and regulations
+                  Download the complete rulebook with all guidelines and
+                  regulations
                 </p>
                 <div className="flex items-center gap-2 text-cyan-400 font-semibold">
                   <Download className="w-5 h-5" />
@@ -475,7 +476,8 @@ const HackNex = () => {
                   PPT Format
                 </h3>
                 <p className="text-gray-400 mb-4">
-                  Download the official presentation template for idea submission
+                  Download the official presentation template for idea
+                  submission
                 </p>
                 <div className="flex items-center gap-2 text-purple-400 font-semibold">
                   <Download className="w-5 h-5" />
@@ -486,7 +488,8 @@ const HackNex = () => {
 
             <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm">
-                💡 Tip: Download these files before the event to ensure smooth participation
+                💡 Tip: Download these files before the event to ensure smooth
+                participation
               </p>
             </div>
           </div>
