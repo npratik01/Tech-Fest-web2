@@ -513,14 +513,18 @@ const HackNex = () => {
                 <div className="flex items-center justify-center gap-3 text-gray-300">
                   <Phone className="w-5 h-5 text-cyan-400" />
                   <div className="text-left">
-                    <p className="font-semibold">Shubham Badgujar (President)</p>
+                    <p className="font-semibold">
+                      Shubham Badgujar (President)
+                    </p>
                     <p>+91 95119 74562</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-3 text-gray-300">
                   <Phone className="w-5 h-5 text-cyan-400" />
                   <div className="text-left">
-                    <p className="font-semibold">Devesh Jagdale (Vice President)</p>
+                    <p className="font-semibold">
+                      Devesh Jagdale (Vice President)
+                    </p>
                     <p>+91 93220 30778</p>
                   </div>
                 </div>
