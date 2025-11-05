@@ -464,7 +464,6 @@ const Hero = () => {
                 <span className="text-sm sm:text-base">9:00 AM onwards</span>
               </div>
             </motion.div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4">
               <motion.a
