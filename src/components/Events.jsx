@@ -80,7 +80,7 @@ const Events = () => {
         "24 hrs ultimate hackathon by COMPACT - Computer Association for Creative Technocrats. Build innovative solutions, collaborate with brilliant minds, and create groundbreaking projects.",
       icon: Code,
       color: "from-blue-500 to-cyan-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/77R5Z7kVq8FMQa5E6",
       organizer: "COMPACT",
       detailsLink: "/events/hacknex",
     },
@@ -91,8 +91,9 @@ const Events = () => {
         "Time-based drone racing simulation competition by Team Third Axis (Drone Club). Experience cutting-edge drone technology and master aerial racing navigation.",
       icon: Plane,
       color: "from-purple-500 to-pink-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/Dw1PvVpnZgBhE6eq9",
       organizer: "Team Third Axis",
+      detailsLink: "/events/aerosim",
     },
     {
       id: 3,
@@ -123,7 +124,7 @@ const Events = () => {
         "Hands-on cybersecurity event by Cyber Security Club. Identify phishing scams, decode ciphers, and use OSINT to uncover digital clues in this thrilling challenge.",
       icon: Shield,
       color: "from-indigo-500 to-purple-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/NskPo4aaFMMP4pge7",
       organizer: "Cyber Security Club",
       detailsLink: "/events/cyber-shield",
     },
@@ -134,7 +135,7 @@ const Events = () => {
         "Design, build, and control loop event by INSAT-A. Challenge your instrumentation and control system skills in this hands-on technical competition.",
       icon: Cog,
       color: "from-teal-500 to-cyan-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/KVA2LMF1wDAxJ1Gd9",
       organizer: "INSAT-A",
       detailsLink: "/events/blackbox-control",
     },
@@ -145,7 +146,7 @@ const Events = () => {
         "Design and construct a truss using popsicle sticks by CESA. Build the strongest truss possible with creativity, engineering thinking, and teamwork.",
       icon: Construction,
       color: "from-orange-500 to-red-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/bPx74nRNnGVCToQUA",
       organizer: "CESA",
       detailsLink: "/events/truss-arena",
     },
@@ -156,7 +157,7 @@ const Events = () => {
         "Three-round technical competition by Team Trionix (EV Club). Push the boundaries of electric vehicle innovation and showcase your technical prowess.",
       icon: Sparkles,
       color: "from-red-500 to-pink-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/tgR4owzvyPu1KUgj7",
       organizer: "Team Trionix",
       detailsLink: "/events/evolve",
     },
@@ -167,7 +168,7 @@ const Events = () => {
         "Engaging technical competition by MESA to test aptitude, technical knowledge, tool identification, and innovative thinking through a structured three-round format.",
       icon: Brain,
       color: "from-yellow-500 to-orange-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/AcBCyKFNxv7VGZwd9",
       organizer: "MESA",
       detailsLink: "/events/mech-mind-quest",
     },
@@ -178,7 +179,7 @@ const Events = () => {
         "Three-round electrical engineering competition by EESA featuring The Blind Spark, Circuitrix, and Debug the Circuit challenges. Showcase your electrical expertise.",
       icon: CircuitBoard,
       color: "from-green-500 to-emerald-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/ow38mPA4DQhWmLuS7",
       organizer: "EESA",
       detailsLink: "/events/electrolite",
     },
@@ -347,6 +348,8 @@ const Events = () => {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
                       href={event.registerLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`flex-1 px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-r ${event.color} text-white rounded-xl font-semibold text-sm sm:text-base hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 text-center transform hover:-translate-y-0.5 active:translate-y-0`}
                     >
                       Register Now

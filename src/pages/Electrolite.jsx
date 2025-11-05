@@ -324,7 +324,9 @@ const Electrolite = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <motion.a
-                href="#register"
+                href="https://forms.gle/ow38mPA4DQhWmLuS7"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-green-500/50 transition-all"

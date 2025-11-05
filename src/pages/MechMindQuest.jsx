@@ -314,7 +314,9 @@ const MechMindQuest = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <motion.a
-                href="#register"
+                href="https://forms.gle/AcBCyKFNxv7VGZwd9"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-yellow-500/50 transition-all"

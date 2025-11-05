@@ -15,6 +15,9 @@ import {
   Gift,
   Phone,
   Mail,
+  FileText,
+  Presentation,
+  Download,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -222,7 +225,9 @@ const HackNex = () => {
 
               <div className="mt-10">
                 <a
-                  href="#register"
+                  href="https://forms.gle/77R5Z7kVq8FMQa5E6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Register Now
@@ -426,6 +431,67 @@ const HackNex = () => {
           </div>
         </section>
 
+        {/* Downloads Section */}
+        <section className="py-20 bg-gray-900">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-center mb-12">
+              <span className="gradient-text">Downloads</span>
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Rulebook Button */}
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-2 border-blue-500/30 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300 flex flex-col items-center text-center"
+              >
+                <div className="w-20 h-20 mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <FileText className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Official Rulebook
+                </h3>
+                <p className="text-gray-400 mb-4">
+                  Download the complete rulebook with all guidelines and regulations
+                </p>
+                <div className="flex items-center gap-2 text-cyan-400 font-semibold">
+                  <Download className="w-5 h-5" />
+                  <span>Download PDF</span>
+                </div>
+              </motion.a>
+
+              {/* PPT Format Button */}
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-2 border-purple-500/30 rounded-2xl p-8 hover:border-purple-500 transition-all duration-300 flex flex-col items-center text-center"
+              >
+                <div className="w-20 h-20 mb-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Presentation className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  PPT Format
+                </h3>
+                <p className="text-gray-400 mb-4">
+                  Download the official presentation template for idea submission
+                </p>
+                <div className="flex items-center gap-2 text-purple-400 font-semibold">
+                  <Download className="w-5 h-5" />
+                  <span>Download Template</span>
+                </div>
+              </motion.a>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-gray-400 text-sm">
+                💡 Tip: Download these files before the event to ensure smooth participation
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Registration Section */}
         <section id="register" className="py-20 bg-gray-900">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -458,7 +524,9 @@ const HackNex = () => {
             </div>
 
             <a
-              href="#"
+              href="https://forms.gle/77R5Z7kVq8FMQa5E6"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl font-bold text-xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:-translate-y-1"
             >
               Register Now

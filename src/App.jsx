@@ -21,6 +21,7 @@ import CyberShield from "./pages/CyberShield";
 import Electrolite from "./pages/Electrolite";
 import ElectroQuest from "./pages/ElectroQuest";
 import TrussArena from "./pages/TrussArena";
+import AeroSim from "./pages/AeroSim";
 
 function HomePage() {
   return (
@@ -70,6 +71,7 @@ function App() {
         <Route path="/events/electrolite" element={<Electrolite />} />
         <Route path="/events/electroquest" element={<ElectroQuest />} />
         <Route path="/events/truss-arena" element={<TrussArena />} />
+        <Route path="/events/aerosim" element={<AeroSim />} />
       </Routes>
     </>
   );
