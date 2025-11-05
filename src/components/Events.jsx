@@ -114,6 +114,7 @@ const Events = () => {
       color: "from-pink-500 to-purple-500",
       registerLink: "#register",
       organizer: "E-TESA",
+      detailsLink: "/events/electroquest",
     },
     {
       id: 5,
@@ -146,6 +147,7 @@ const Events = () => {
       color: "from-orange-500 to-red-500",
       registerLink: "#register",
       organizer: "CESA",
+      detailsLink: "/events/truss-arena",
     },
     {
       id: 8,
@@ -171,13 +173,14 @@ const Events = () => {
     },
     {
       id: 10,
-      title: "Electro Elite",
+      title: "Electrolite",
       description:
         "Three-round electrical engineering competition by EESA featuring The Blind Spark, Circuitrix, and Debug the Circuit challenges. Showcase your electrical expertise.",
       icon: CircuitBoard,
       color: "from-green-500 to-emerald-500",
       registerLink: "#register",
       organizer: "EESA",
+      detailsLink: "/events/electrolite",
     },
   ];
 

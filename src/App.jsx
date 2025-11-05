@@ -18,6 +18,9 @@ import MechMindQuest from "./pages/MechMindQuest";
 import RCCarRacing from "./pages/RCCarRacing";
 import Evolve from "./pages/Evolve";
 import CyberShield from "./pages/CyberShield";
+import Electrolite from "./pages/Electrolite";
+import ElectroQuest from "./pages/ElectroQuest";
+import TrussArena from "./pages/TrussArena";
 
 function HomePage() {
   return (
@@ -64,6 +67,9 @@ function App() {
         <Route path="/events/rc-car-racing" element={<RCCarRacing />} />
         <Route path="/events/evolve" element={<Evolve />} />
         <Route path="/events/cyber-shield" element={<CyberShield />} />
+        <Route path="/events/electrolite" element={<Electrolite />} />
+        <Route path="/events/electroquest" element={<ElectroQuest />} />
+        <Route path="/events/truss-arena" element={<TrussArena />} />
       </Routes>
     </>
   );
