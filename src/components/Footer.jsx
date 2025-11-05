@@ -29,7 +29,7 @@ const Footer = () => {
               Tech Fest 2025
             </h3>
             <p className="text-gray-300 text-base font-semibold italic leading-relaxed">
-              Scale. Speed. Spectacle. The New Pulse of GCOEJ.
+              Scale. Speed. Spectacle. <br />The New Pulse of GCOEJ.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ const Footer = () => {
                   <span className="text-gray-500"> (Convenor)</span>
                   <br />
                   <a
-                    href="tel:+917432993283"
+                    href="tel:+919011437886"
                     className="hover:text-neon-blue transition-colors"
                   >
                     +91 9011437886
@@ -64,7 +64,7 @@ const Footer = () => {
                   <span className="text-gray-500"> (Co-Convenor)</span>
                   <br />
                   <a
-                    href="tel:+917372382387"
+                    href="tel:+917499441450"
                     className="hover:text-neon-blue transition-colors"
                   >
                     +91 7499441450
@@ -80,7 +80,7 @@ const Footer = () => {
                   <span className="text-gray-500"> (Co-Convenor)</span>
                   <br />
                   <a
-                    href="tel:+918372884929"
+                    href="tel:+918788066583"
                     className="hover:text-neon-blue transition-colors"
                   >
                     +91 8788066583
@@ -96,7 +96,7 @@ const Footer = () => {
                   <span className="text-gray-500"> (Co-Convenor)</span>
                   <br />
                   <a
-                    href="tel:+913837282498"
+                    href="tel:+919766285034"
                     className="hover:text-neon-blue transition-colors"
                   >
                     +91 9766285034
@@ -147,7 +147,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://www.linkedin.com/company/technical-council-gcoej"
+                  href="https://www.linkedin.com/company/technical-council-gcoej/?viewAsMember=true"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-neon-blue transition-colors text-sm flex items-center gap-2"
@@ -158,7 +158,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/technicalcouncil_gcoej"
+                  href="https://www.instagram.com/technical.council_gcoej?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-neon-pink transition-colors text-sm flex items-center gap-2"
