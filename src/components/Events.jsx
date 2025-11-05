@@ -97,12 +97,12 @@ const Events = () => {
     },
     {
       id: 3,
-      title: "RC Car Racing Challenge",
+      title: "Asterix's Rover Challenge",
       description:
         "High-speed remote control car racing competition by Team Asterix. Test your driving skills, strategy, and reflexes in this adrenaline-pumping race.",
       icon: Car,
       color: "from-cyan-500 to-blue-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/4mYvPKSjC5dy3qGBA",
       organizer: "Team Asterix",
       detailsLink: "/events/rc-car-racing",
     },
@@ -113,7 +113,7 @@ const Events = () => {
         "Three-round technical competition by E-TESA to test aptitude, technical knowledge, and practical circuit skills. Encourages analytical thinking, teamwork, and innovation.",
       icon: Zap,
       color: "from-pink-500 to-purple-500",
-      registerLink: "#register",
+      registerLink: "https://forms.gle/WipLcsSaqgNAQ2Uf9",
       organizer: "E-TESA",
       detailsLink: "/events/electroquest",
     },

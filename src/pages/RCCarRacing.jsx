@@ -115,7 +115,7 @@ const RCCarRacing = () => {
               <Car className="w-20 h-20 text-cyan-400 animate-bounce" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              RC CAR RACING CHALLENGE
+              ASTERIX'S ROVER CHALLENGE
             </h1>
             <p className="text-2xl text-gray-300 mb-4 font-semibold">
               Experience the Thrill of Speed and Engineering!
@@ -348,7 +348,9 @@ const RCCarRacing = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <motion.a
-                href="#register"
+                href="https://forms.gle/4mYvPKSjC5dy3qGBA"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
