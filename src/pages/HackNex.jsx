@@ -29,12 +29,12 @@ const HackNex = () => {
     title: "HackNex",
     tagline: "24 Hours of Innovation & Code",
     duration: "24 Hours",
-    date: "January 18-19, 2025",
-    time: "9:00 AM onwards",
-    venue: "Government College of Engineering Jalgaon",
+    date: "13-14 November 2025",
+    time: "11:30 AM onwards",
+    venue: "Reading Hall, Government College of Engineering Jalgaon",
     organizer: "COMPACT",
-    teamSize: "2-4 members",
-    registrationFee: "₹500 per team",
+    teamSize: "4 members (exactly)",
+    registrationFee: "₹400 per team",
   };
 
   const highlights = [
@@ -61,59 +61,95 @@ const HackNex = () => {
   ];
 
   const schedule = [
-    { time: "9:00 AM", event: "Registration & Breakfast" },
-    { time: "10:00 AM", event: "Opening Ceremony & Problem Statement Release" },
-    { time: "11:00 AM", event: "Hacking Begins!" },
-    { time: "1:00 PM", event: "Lunch Break" },
-    { time: "6:00 PM", event: "Mid-evaluation & Dinner" },
-    { time: "12:00 AM", event: "Midnight Snacks & Coffee" },
-    { time: "8:00 AM", event: "Breakfast (Day 2)" },
-    { time: "11:00 AM", event: "Code Freeze - Hacking Ends" },
-    { time: "11:30 AM", event: "Project Submissions & Lunch" },
-    { time: "1:00 PM", event: "Presentations Begin" },
-    { time: "4:00 PM", event: "Winner Announcement & Prize Distribution" },
+    { time: "Day 1 - 13th Nov", event: "", isHeader: true },
+    { time: "9:00 AM - 9:30 AM", event: "Team Registration" },
+    { time: "9:30 AM - 10:30 AM", event: "Inauguration & Welcome Address" },
+    { time: "10:30 AM - 11:30 AM", event: "Idea Pitching Session" },
+    { time: "11:30 AM", event: "Official 24-Hour Hackathon Begins" },
+    { time: "1:30 PM - 2:30 PM", event: "Lunch Break" },
+    { time: "5:00 PM", event: "Snacks & Tea" },
+    { time: "8:00 PM - 9:00 PM", event: "Dinner" },
+    { time: "12:00 Midnight", event: "Midnight Snacks & Energy Break" },
+    { time: "Day 2 - 14th Nov", event: "", isHeader: true },
+    { time: "3:00 AM", event: "Refreshing Tea Break" },
+    { time: "8:00 AM - 9:00 AM", event: "Breakfast" },
+    { time: "10:30 AM", event: "Final Coding Ends" },
+    { time: "11:30 AM", event: "PPT Submission & Hackathon Ends" },
+    { time: "11:30 AM - 12:30 PM", event: "Relaxation Break" },
+    { time: "12:30 PM - 1:00 PM", event: "Lunch" },
+    { time: "1:00 PM Onwards", event: "Final Presentations & Judging" },
+    { time: "After Presentations", event: "Valedictory Ceremony & Prize Distribution" },
   ];
 
   const prizes = [
     {
       place: "1st Prize",
-      amount: "₹20,000",
+      amount: "Cash Prize",
       color: "from-yellow-500 to-orange-500",
     },
     {
       place: "2nd Prize",
-      amount: "₹12,000",
+      amount: "Cash Prize",
       color: "from-gray-400 to-gray-600",
     },
     {
       place: "3rd Prize",
-      amount: "₹8,000",
+      amount: "Cash Prize",
       color: "from-orange-600 to-yellow-700",
     },
     {
-      place: "Special Prizes",
-      amount: "₹10,000+",
+      place: "All Participants",
+      amount: "Certificate",
       color: "from-cyan-500 to-blue-500",
     },
   ];
 
   const rules = [
-    "Team size must be between 2-4 members",
-    "All team members must be college students",
+    "Each team must have exactly 4 members (compulsory)",
+    "Members may belong to different departments, but must be students of GCOEJ",
+    "A participant can be part of only one team",
+    "Each team must nominate one Team Leader for official communication",
+    "Registration Fee: ₹400 per team (non-refundable)",
+    "Registration Deadline: 7th November 2025, 11:59 PM",
+    "All participants must sign the Code of Conduct Form before event starts",
     "Code must be written during the hackathon only",
     "Use of pre-built libraries and APIs is allowed",
     "Plagiarism will lead to immediate disqualification",
-    "Final submission must include source code and presentation",
     "Decision of judges will be final and binding",
   ];
 
   const themes = [
-    "Healthcare & Wellness",
-    "Education Technology",
-    "Sustainable Development",
-    "Smart Cities",
-    "FinTech Solutions",
-    "Open Innovation",
+    "AI-Powered Smart Campus Innovation",
+    "Real-Time Smart Agriculture using AI & ML",
+    "Sustainable Healthcare & Environmental Intelligence",
+  ];
+
+  const importantDates = [
+    {
+      date: "7th Nov 2025 (11:59 PM)",
+      title: "Registration Deadline",
+      description: "Register via official QR/link",
+    },
+    {
+      date: "8th Nov 2025 (10:00 AM)",
+      title: "Problem Statement Release",
+      description: "Problem statements and PPT format shared with team leaders via email",
+    },
+    {
+      date: "10th Nov 2025 (11:59 PM)",
+      title: "PPT Submission Deadline",
+      description: "Submit idea presentation (PPT)",
+    },
+    {
+      date: "12th Nov 2025 (12:00 PM)",
+      title: "Result Announcement (PPT Round)",
+      description: "Shortlisted teams announced for final round",
+    },
+    {
+      date: "13th Nov 2025",
+      title: "Final Round (On-Campus)",
+      description: "Offline registration at 8:30 AM, followed by inauguration and hackathon start",
+    },
   ];
 
   return (
@@ -175,7 +211,7 @@ const HackNex = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-cyan-400" />
-                  <span>GCOEJ</span>
+                  <span>Reading Hall, GCOEJ</span>
                 </div>
               </div>
 
@@ -236,10 +272,10 @@ const HackNex = () => {
         <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-center mb-12">
-              <span className="gradient-text">Problem Themes</span>
+              <span className="gradient-text">Official Themes</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {themes.map((theme, index) => (
                 <div
                   key={index}
@@ -252,14 +288,51 @@ const HackNex = () => {
                 </div>
               ))}
             </div>
+            <p className="text-center text-gray-400 mt-6">
+              Problem statements will be based on these themes
+            </p>
+          </div>
+        </section>
+
+        {/* Important Dates Section */}
+        <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-center mb-12">
+              <span className="gradient-text">Important Dates</span>
+            </h2>
+
+            <div className="space-y-6">
+              {importantDates.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-lg font-bold text-center">
+                        {item.date}
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+                      <p className="text-gray-400">{item.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Schedule Section */}
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-950">
+        <section className="py-20 bg-gradient-to-b from-gray-950 to-gray-900">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-center mb-12">
-              <span className="gradient-text">Event Schedule</span>
+              <span className="gradient-text">Hackathon Timeline</span>
             </h2>
 
             <div className="space-y-4">
@@ -270,12 +343,24 @@ const HackNex = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-4 flex items-center gap-4 hover:border-cyan-500/50 transition-all duration-300"
+                  className={`${
+                    item.isHeader
+                      ? "bg-gradient-to-r from-blue-500 to-cyan-500 text-white"
+                      : "bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-cyan-500/50"
+                  } rounded-xl p-4 flex items-center gap-4 transition-all duration-300`}
                 >
-                  <div className="flex-shrink-0 w-24 text-cyan-400 font-bold">
-                    {item.time}
-                  </div>
-                  <div className="flex-1 text-gray-300">{item.event}</div>
+                  {item.isHeader ? (
+                    <div className="w-full text-center font-bold text-lg">
+                      {item.time}
+                    </div>
+                  ) : (
+                    <>
+                      <div className="flex-shrink-0 w-32 md:w-40 text-cyan-400 font-bold text-sm md:text-base">
+                        {item.time}
+                      </div>
+                      <div className="flex-1 text-gray-300">{item.event}</div>
+                    </>
+                  )}
                 </motion.div>
               ))}
             </div>
