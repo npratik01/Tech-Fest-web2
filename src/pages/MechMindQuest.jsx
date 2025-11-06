@@ -81,8 +81,8 @@ const MechMindQuest = () => {
   const prizes = [
     {
       position: "Winners",
-      reward: "Cash Prizes & Trophies",
-      description: "Top performers receive exciting cash prizes and trophies",
+      reward: "Cash Prizes",
+      description: "Top performers receive exciting cash prizes",
     },
     {
       position: "All Participants",

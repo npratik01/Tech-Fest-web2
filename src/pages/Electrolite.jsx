@@ -127,7 +127,7 @@ const Electrolite = () => {
               <CircuitBoard className="w-20 h-20 text-green-400" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              Circuitethive
+              Circuithive
             </h1>
             <p className="text-2xl text-gray-300 mb-4 font-semibold">
               Electrical Engineering Challenge
@@ -141,7 +141,7 @@ const Electrolite = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-4 py-2 rounded-full">
                 <Calendar className="w-5 h-5 text-green-400" />
-                <span>January 18, 2025</span>
+                <span>14 November 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded-full">
                 <Clock className="w-5 h-5 text-emerald-400" />
@@ -191,7 +191,7 @@ const Electrolite = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              About Circuitethive
+              About Circuithive
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               A comprehensive three-round electrical engineering competition

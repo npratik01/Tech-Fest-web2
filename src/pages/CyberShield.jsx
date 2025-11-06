@@ -184,7 +184,7 @@ const CyberShield = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 px-4 py-2 rounded-full">
                 <Calendar className="w-5 h-5 text-indigo-400" />
-                <span>January 18, 2025</span>
+                <span>14 November 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 px-4 py-2 rounded-full">
                 <Clock className="w-5 h-5 text-purple-400" />
@@ -407,7 +407,7 @@ const CyberShield = () => {
               </p>
               <p className="flex items-center justify-center gap-2">
                 <MapPin className="w-5 h-5" />
-                <span>Venue: Government College of Engineering, Jalgaon</span>
+                <span>Venue: Lab No. 212, Government College of Engineering, Jalgaon</span>
               </p>
             </div>
           </motion.div>

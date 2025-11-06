@@ -174,7 +174,7 @@ const Events = () => {
     },
     {
       id: 10,
-      title: "Circuitethive",
+      title: "Circuithive",
       description:
         "Three-round electrical engineering competition by EESA featuring The Blind Spark, Circuitrix, and Debug the Circuit challenges. Showcase your electrical expertise.",
       icon: CircuitBoard,

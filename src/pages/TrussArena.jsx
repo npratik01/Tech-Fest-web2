@@ -137,7 +137,7 @@ const TrussArena = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 px-4 py-2 rounded-full">
                 <Calendar className="w-5 h-5 text-orange-400" />
-                <span>January 18, 2025</span>
+                <span>14 November 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-4 py-2 rounded-full">
                 <Clock className="w-5 h-5 text-amber-400" />

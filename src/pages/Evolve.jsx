@@ -133,7 +133,7 @@ const Evolve = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-pink-500/10 border border-pink-500/20 px-4 py-2 rounded-full">
                 <Calendar className="w-5 h-5 text-pink-400" />
-                <span>January 18, 2025</span>
+                <span>14 November 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-red-500/10 border border-red-500/20 px-4 py-2 rounded-full">
                 <MapPin className="w-5 h-5 text-red-400" />

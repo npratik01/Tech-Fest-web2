@@ -114,7 +114,7 @@ const BlackBoxControl = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-teal-500/10 border border-teal-500/20 px-4 py-2 rounded-full">
                 <Calendar className="w-5 h-5 text-teal-400" />
-                <span>January 18, 2025</span>
+                <span>14 November 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-full">
                 <Clock className="w-5 h-5 text-cyan-400" />
