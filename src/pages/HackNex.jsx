@@ -436,7 +436,9 @@ const HackNex = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Rulebook Button */}
               <motion.a
-                href="#"
+                href="https://drive.google.com/file/d/1s4JtR8lMUYAYiayFQUKV0bIhN8GW-htH/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="group bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-2 border-blue-500/30 rounded-2xl p-8 hover:border-blue-500 transition-all duration-300 flex flex-col items-center text-center"
@@ -459,7 +461,9 @@ const HackNex = () => {
 
               {/* PPT Format Button */}
               <motion.a
-                href="#"
+                href="https://docs.google.com/presentation/d/1gfsZy1PdHhk0WsH_4BzpxqlBQmU_QLj7/edit?usp=drive_link&ouid=100249611650153087882&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-2 border-purple-500/30 rounded-2xl p-8 hover:border-purple-500 transition-all duration-300 flex flex-col items-center text-center"
