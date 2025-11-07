@@ -506,7 +506,7 @@ const HackNex = () => {
             </p>
 
             <p className="text-2xl text-cyan-400 font-bold mb-8">
-              Registration Fee: {eventDetails.registrationFee}
+              Registration Fee: {eventDetails.registrationFee} <br />(For second round selected teams only)
             </p>
 
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-8">
