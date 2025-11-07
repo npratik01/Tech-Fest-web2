@@ -70,7 +70,7 @@ const Evolve = () => {
   const rules = [
     "Open to students of all engineering branches",
     "Team size: Individual or Group of 2 members",
-    "Participation fee: ₹30 per team",
+    "Participation fee: ₹30 for Individual, ₹60 for Team",
     "All three rounds are compulsory",
     "Venue: Room No. 17 and 19, GCOE Jalgaon",
     "Teams must complete all rounds to be eligible for prizes",
@@ -145,7 +145,7 @@ const Evolve = () => {
               </div>
               <div className="flex items-center gap-2 bg-red-500/10 border border-red-500/20 px-4 py-2 rounded-full">
                 <IndianRupee className="w-5 h-5 text-red-400" />
-                <span>₹30 per Team</span>
+                <span>₹30 Individual / ₹60 Team</span>
               </div>
             </div>
           </motion.div>
@@ -320,14 +320,14 @@ const Evolve = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <motion.a
-                href="https://forms.gle/tgR4owzvyPu1KUgj7"
+                href="https://forms.gle/qgaJP6ow8e4t7VNT8"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-pink-500/50 transition-all"
               >
-                Register Now - ₹30
+                Register Now - ₹30/₹60
               </motion.a>
             </div>
             <div className="text-gray-400 space-y-2">
